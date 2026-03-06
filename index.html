@@ -5,20 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lancelot&family=Outfit:wght@100..900&display=swap"
-        rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
-        rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Hammersmith+One&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
-        rel="stylesheet">
-
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Funnel+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Mono:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/navbar.css">
     <link rel="stylesheet" href="css/hero.css">
@@ -28,6 +22,8 @@
     <link rel="stylesheet" href="css/testimonials.css">
     <link rel="stylesheet" href="css/contact.css">
     <link rel="stylesheet" href="css/footer.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <script src="script.js" defer></script>
 
@@ -37,18 +33,21 @@
     <header>
         <nav class="navbar">
 
-            <button class="hamburger" aria-label="Öppna meny" aria-expanded="false">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
             <ul class="nav-links">
                 <li><a href="#about">About</a></li>
                 <li><a href="#projects">Project</a></li>
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#testimonials">Testimonials</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#contact"><i class="fa fa-github" aria-hidden="true"></i></a></li>
+                <li><a href="#contact" class="nav-cta">Contact</a></li>
+                
+                
             </ul>
+            <button class="hamburger" aria-label="Öppna meny" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </nav>
     </header>
 
@@ -56,16 +55,20 @@
 
         
         <section id="hero" class="hero">
+
+     
             <div class="container">
                 <div class="hero-content">
                     <div class="hero-text">
-                        <h1>HÄR SKA DET STÅ NÅT 
-                            RIKTIGT SPÄNNANDE 
-                        </h1>
-                        <p> Här skulle det också kunna stå nåt skojjigt ju? Todo: Lägg till mer padding mellan h1an och p. Varför ser de så skumt ut? Allt radbryts liksom lite konstigt eller? Är rubriken för stor?  nåt skojjigt ju? Todo: Lägg till mer padding mellan h1an och p. Varför ser de så skumt ut? Allt radbryts liksom lite konstigt eller? Är rubriken för stor?  nåt skojjigt ju? Todo: Lägg till mer padding mellan h1an och p. Varför ser de så skumt ut? Allt radbryts liksom lite konstigt eller? Är rubriken för stor?  nåt skojjigt ju? Todo: Lägg till mer padding mellan h1an och p. Varför ser de så skumt ut? Allt radbryts liksom lite konstigt eller? Är rubriken för stor?</p>
+                        <h1 class="hero-name">Sara Lindh</h1>
+                        <p class="hero-tagline">Aspiring .NET cloud developer based in Gothenburg
+with a background in leadership and business operations.
+I enjoy solving problems and approaching challenges from multiple perspectives: technical, human and business <i class="fa fa-line-chart" aria-hidden="true"></i>
+                        </p>
+                        <p class="hero-scroll">Scroll down to see my work <i class="fa fa-arrow-circle-o-down" aria-hidden="true"></i></p>
                     </div>
                     <div class="hero-image">
-                        <img src ="profilepic.jpeg"alt="profile-picture">
+                        
                     </div>
                 </div>
             </div>
