@@ -1,6 +1,6 @@
 
 .section-about {
-    background-color: var(--background-color-2);
+    background-color: var(--background)
 }
 
 .about-content {
@@ -16,7 +16,6 @@
 .about-text {
     flex: 1;
 }
-
 
 @media (max-width: 768px) {
     .about-content {
