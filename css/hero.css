@@ -63,7 +63,7 @@
     font-size: clamp(3rem, 6vw, 6rem);
     font-weight: 700;
     color: rgba(255, 255, 255, 0.95);
-    margin-bottom: var(--spacing-medium);
+  
 }
 
 .hero-tagline {
