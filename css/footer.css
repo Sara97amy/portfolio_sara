@@ -1,0 +1,24 @@
+
+footer {
+    background-color: var(--background-color-1);
+    padding: calc(var(--spacing-section) / 2) 0;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: var(--spacing-large);
+}
+
+.footer-logo {}
+.footer-links {}
+.footer-social {}
+
+
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+}

@@ -1,0 +1,25 @@
+
+.section-about {
+    background-color: var(--background-color-2);
+}
+
+.about-content {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-large);
+}
+
+.about-image {
+    flex: 1;
+}
+
+.about-text {
+    flex: 1;
+}
+
+
+@media (max-width: 768px) {
+    .about-content {
+        flex-direction: column;
+    }
+}

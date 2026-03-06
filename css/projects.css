@@ -1,0 +1,30 @@
+
+.section-projects {
+    background-color: var(--background-color-1);
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--spacing-large);
+}
+
+.project-card {
+    min-height: 300px;
+    background-color: rgba(0,0,0,0.05);
+    border-radius: var(--border-radius);
+    padding: var(--padding-card);
+}
+
+
+@media (max-width: 768px) {
+    .projects-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+}

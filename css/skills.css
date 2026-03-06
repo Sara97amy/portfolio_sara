@@ -1,0 +1,30 @@
+
+.section-skills {
+    background-color: var(--background-color-2);
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--spacing-large);
+}
+
+.skill-item {
+    min-height: 100px;
+    background-color: rgba(0,0,0,0.05);
+    border-radius: var(--border-radius);
+    padding: var(--padding-card);
+}
+
+
+@media (max-width: 768px) {
+    .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}

@@ -1,0 +1,14 @@
+
+.section-contact {
+    background-color: var(--background-color);
+}
+
+.contact-content {
+    display: flex;
+    justify-content: center;
+}
+
+.contact-form {
+    width: 100%;
+    max-width: 600px;
+}
