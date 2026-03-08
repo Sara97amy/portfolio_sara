@@ -10,8 +10,8 @@
 :root {
     --background-color: #ffffff;
     --accent-color-blue: #4f67b1;
-    --accent-color-red: #b44b28;
-    --text-color: #151515;
+    --accent-color-orange: #f87828;
+    --text-color: #1c2f74;
     --spacing-small: 8px;
     --spacing-medium: 16px;
     --spacing-large: 32px;
@@ -20,8 +20,8 @@
     --padding-card: var(--spacing-large);
     --border-radius: 8px;
     --font-body: 800;
-    --background-color-1: #ffffff;
-    --background-color-2: #ffffff;
+    --background-color-1: #fff2e6;
+    --background-color-2: #ffe3c8;
 }
 
 body {
@@ -54,19 +54,20 @@ h1 {
 }
 
 h2{
-     color: var(--accent-color-red);
+     color: var(--accent-color-orange);
     font-family: 'Funnel Sans', sans-serif;
     font-size: medium;
+     text-transform: uppercase;
 
 
 }
 h3, h4, h5, h6 {
-    color: var(--accent-color-red);
+    color: var(--accent-color-orange);
     font-family: 'Funnel Sans', sans-serif;
 }
 
 p {
-    color: white;
+    color: rgb(0, 0, 0);
     font-size: 20px;
       font-family: 'Funnel Sans', sans-serif;
 }
