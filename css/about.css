@@ -10,13 +10,13 @@
 }
 
 .about-image {
-    flex: 1;
+    flex: 2;
 }
 
 .about-image img {
     width: 100%;
     height: auto;
-    border-radius: var(--border-radius);
+    border-radius: 50%;
 }
 
 .about-text {
@@ -24,63 +24,135 @@
 }
 
 .timeline {
+    font-family: 'Atkinson Hyperlegible Mono', monospace;
     position: relative;
-    margin-top: var(--spacing-large);
 }
 
 .timeline::before {
     content: '';
     position: absolute;
-    left: calc(80px + var(--spacing-medium) + 9px);
-    top: 11px;
+    left: -20px;
+    top: 0.55em;
     bottom: 0;
     width: 2px;
     background: var(--accent-color-orange);
-    z-index: 0;
+}
+
+.timeline-dot {
+    display: none;
 }
 
 .timeline-item {
     display: grid;
-    grid-template-columns: 80px 20px 1fr;
-    align-items: start;
-    gap: 0 var(--spacing-medium);
-    margin-bottom: var(--spacing-large);
+    grid-template-columns: auto 1fr;
+    gap: 0 10px;
+    margin-bottom: var(--spacing-medium);
     position: relative;
+}
+
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -20px;
+    top: 0.55em;
+    width: 20px;
+    height: 2px;
+    background: var(--accent-color-orange);
+}
+
+.timeline-item:last-child::after {
+    content: '';
+    position: absolute;
+    left: -20px;
+    top: calc(0.55em + 2px);
+    bottom: -200px;
+    width: 2px;
+    background: var(--background-color-1);
+    z-index: 1;
 }
 
 .timeline-year {
-    font-size: 0.75rem;
+    font-size: 0.8rem;
     font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
     color: var(--accent-color-orange);
-    text-align: left;
-    padding-top: 4px;
-}
-
-.timeline-dot {
-    width: 14px;
-    height: 14px;
-    border-radius: 50%;
-    background: var(--accent-color-orange);
-    margin: 4px auto 0;
-    position: relative;
-    z-index: 1;
 }
 
 .timeline-content h3 {
     margin-top: 0;
-    margin-bottom: 6px;
-    font-size: 1rem;
-    line-height: 1;
-    padding-top: 4px;
+    margin-bottom: 2px;
+    font-size: 0.9rem;
+    font-family: 'Atkinson Hyperlegible Mono', monospace;
 }
 
 .timeline-content p {
-    font-size: 0.9rem;
+    font-size: 0.82rem;
+    opacity: 0.7;
+    line-height: 1.5;
+    padding-top: 2px;
+}
+
+.education-tags {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-small);
+}
+
+.education-tag {
+    font-family: 'Atkinson Hyperlegible Mono', monospace;
+    font-size: 0.8rem;
+    color: var(--accent-color-orange);
+    background-color: var(--background-color-2);
+    border: 1.5px solid var(--accent-color-orange);
+    border-radius: 12px;
+    padding: 8px 14px;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.education-tag-program {
+    font-weight: 700;
+    font-size: 0.8rem;
+}
+
+.education-tag-school {
+    font-size: 0.78rem;
+    opacity: 0.8;
+    font-weight: 400;
+}
+
+.education-tag-desc {
+    font-size: 0.75rem;
+    opacity: 0.7;
+    font-weight: 400;
+}
+
+.merits-list {
+    font-family: 'Atkinson Hyperlegible Mono', monospace;
+}
+
+.merit-item {
+    display: grid;
+    grid-template-columns: 220px 1fr;
+    gap: 0 var(--spacing-medium);
+    padding: 10px 0;
+    border-bottom: 1px solid var(--background-color-2);
+}
+
+.merit-item:first-child {
+    border-top: 1px solid var(--background-color-2);
+}
+
+.merit-label {
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--accent-color-orange);
+}
+
+.merit-value {
+    font-size: 0.8rem;
     opacity: 0.75;
     line-height: 1.5;
-    padding-top: 6px;
 }
 
 @media (max-width: 768px) {
@@ -88,11 +160,12 @@
         flex-direction: column;
     }
 
-    .timeline-item {
-        grid-template-columns: 60px 20px 1fr;
+    .merit-item {
+        grid-template-columns: 1fr;
+        gap: 2px 0;
     }
+}
 
-    .timeline::before {
-        left: calc(60px + var(--spacing-medium) + 9px);
-    }
+.section-about h2:not(:first-child) {
+    margin-top: var(--spacing-section);
 }

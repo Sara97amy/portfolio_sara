@@ -5,21 +5,37 @@
 
 .skills-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: var(--spacing-large);
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--spacing-medium);
 }
 
 .skill-item {
-    min-height: 100px;
-    background-color: rgba(0,0,0,0.05);
-    border-radius: var(--border-radius);
-    padding: var(--padding-card);
+    background-color: white;
+    border-radius: 12px;
+    padding: var(--spacing-large);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-small);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
 }
 
+.skill-item i {
+    font-size: 2.5rem;
+}
+
+.skill-item span {
+    font-family: 'Atkinson Hyperlegible Mono', monospace;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #555;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
 
 @media (max-width: 768px) {
     .skills-grid {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(3, 1fr);
     }
 }
 
@@ -27,4 +43,20 @@
     .skills-grid {
         grid-template-columns: repeat(2, 1fr);
     }
+}
+
+
+
+.skill-item--more {
+    justify-content: center;
+}
+
+.skill-more {
+    font-family: 'Atkinson Hyperlegible Mono', monospace;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #555;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
 }

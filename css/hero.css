@@ -9,7 +9,6 @@
     align-items: center;
     justify-content: center;
     padding-top: 90px;
-    overflow: hidden;
 }
 
 .hero-content {
@@ -19,11 +18,12 @@
     gap: var(--spacing-large);
     position: relative;
     z-index: 2;
+    will-change: transform;
 }
 
 .hero-text {
     max-width: 950px;
-    font-family: "Playfair Display", serif;
+    font-family: "Atkinson Hyperlegible Mono", monospace;
     font-size: clamp(2.2rem, 4vw, 4.4rem);
     line-height: 1.4;
     font-weight: 400;
@@ -32,18 +32,27 @@
     text-align: center;
 }
 
-
-
 .hero-scroll {
     margin-top: var(--spacing-large);
     color: rgba(255, 255, 255, 0.85);
     animation: sway 2.5s ease-in-out infinite;
+    will-change: opacity, transform;
 }
 
-@media (max-width: 768px) {
-    .hero-content {
-        flex-direction: column;
-    }
+.hero-name {
+    font-family: "Atkinson Hyperlegible Mono", monospace;
+    font-size: clamp(3rem, 6vw, 6rem);
+    font-weight: 700;
+    color: rgba(255, 255, 255, 0.95);
+}
+
+.hero-tagline {
+    font-family: "Atkinson Hyperlegible Mono", monospace;
+    font-size: clamp(1rem, 2vw, 1.4rem);
+    line-height: 1.6;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.85);
+    text-align: center;
 }
 
 @keyframes gradientShift {
@@ -58,19 +67,8 @@
     100% { transform: translateY(0); }
 }
 
-.hero-name {
-    font-family: "Atkinson Hyperlegible Mono", serif;
-    font-size: clamp(3rem, 6vw, 6rem);
-    font-weight: 700;
-    color: rgba(255, 255, 255, 0.95);
-  
-}
-
-.hero-tagline {
-    font-family: "Atkinson Hyperlegible Mono", serif;
-    font-size: clamp(1rem, 2vw, 1.4rem);
-    line-height: 1.6;
-    font-weight: 400;
-    color: rgba(255, 255, 255, 0.85);
-    text-align: center;
+@media (max-width: 768px) {
+    .hero-content {
+        flex-direction: column;
+    }
 }
