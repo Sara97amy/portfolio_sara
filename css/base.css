@@ -4,39 +4,56 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    max-width: 100%;
 }
 
 :root {
-    --background-color: #ffffff;
-    --accent-color-blue: #4f67b1;
-    --accent-color-orange: #f87828;
-    --text-color: #1c2f74;
-    --spacing-small: 8px;
-    --spacing-medium: 16px;
-    --spacing-large: 32px;
-    --spacing-section: 80px;
-    --padding-container: 20px;
-    --padding-card: var(--spacing-large);
-    --border-radius: 8px;
-    --background-color-1: #fff2e6;
-    --background-color-2: #ffe3c8;
+    --accent-color-orange:  #f87828;
+    --background-color-1:   #fff2e6;
+    --background-color-2:   #ffe3c8;
+    --color-text:           #1a1a1a;
+    --color-text-muted:     #555;
+    --color-card:           white;
+    --shadow-card:          0 2px 16px rgba(0, 0, 0, 0.07);
+    --border-radius-card:   16px;
+    --spacing-small:        8px;
+    --spacing-medium:       16px;
+    --spacing-large:        32px;
+    --spacing-section:      80px;
+    --padding-container:    20px;
+    --border-radius:        8px;
+}
+
+html {
+    font-size: 16px;
+    overflow-x: hidden;
 }
 
 body {
+    overflow-x: hidden;
+    overflow-wrap: break-word;
+    word-break: break-word;
     font-family: 'Atkinson Hyperlegible Mono', monospace;
     font-size: 1rem;
     line-height: 1.6;
-    color: #1a1a1a;
+    color: var(--color-text);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
 }
 
 .container {
-    width: 90%;
+    width: 100%;
     max-width: 1250px;
     margin: auto;
     padding: 0 var(--padding-container);
 }
 
 section .container {
+    min-width: 0;
     padding: var(--spacing-section);
     display: flex;
     flex-direction: column;
@@ -45,16 +62,12 @@ section .container {
 
 h1 {
     color: white;
-    font-family: 'Atkinson Hyperlegible Mono', monospace;
-    font-size: 30px;
-    padding-bottom: 20px;
     text-align: center;
 }
 
 h2 {
     color: var(--accent-color-orange);
-    font-family: 'Atkinson Hyperlegible Mono', monospace;
-    font-size: 2.2rem;
+    font-size: clamp(1.4rem, 4vw, 2.2rem);
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.04em;
@@ -63,13 +76,40 @@ h2 {
 
 h3, h4, h5, h6 {
     color: var(--accent-color-orange);
-    font-family: 'Atkinson Hyperlegible Mono', monospace;
     text-align: left;
 }
 
 p {
-    font-family: 'Atkinson Hyperlegible Mono', monospace;
     font-size: 0.95rem;
     line-height: 1.7;
-    color: #1a1a1a;
+}
+
+
+@media (max-width: 768px) {
+    html {
+        font-size: 15px;
+    }
+
+    :root {
+        --spacing-section: 50px;
+        --spacing-large:   24px;
+    }
+
+    section .container {
+        padding: var(--spacing-section) 32px;
+    }
+}
+
+@media (max-width: 480px) {
+    html {
+        font-size: 14px;
+    }
+
+    :root {
+        --spacing-section: 36px;
+    }
+
+    section .container {
+        padding: var(--spacing-section) 24px;
+    }
 }

@@ -11,11 +11,6 @@ footer {
     gap: var(--spacing-large);
 }
 
-.footer-logo {}
-.footer-links {}
-.footer-social {}
-
-
 @media (max-width: 768px) {
     .footer-content {
         flex-direction: column;

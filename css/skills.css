@@ -10,7 +10,8 @@
 }
 
 .skill-item {
-    background-color: white;
+    min-width: 0;
+    background-color: var(--color-card);
     border-radius: 12px;
     padding: var(--spacing-large);
     display: flex;
@@ -25,12 +26,19 @@
 }
 
 .skill-item span {
-    font-family: 'Atkinson Hyperlegible Mono', monospace;
     font-size: 1rem;
     font-weight: 600;
-    color: #555;
+    color: var(--color-text-muted);
     text-transform: uppercase;
     letter-spacing: 0.05em;
+}
+
+.skill-item--more {
+    justify-content: center;
+}
+
+.skill-more {
+    text-align: center;
 }
 
 @media (max-width: 768px) {
@@ -43,20 +51,4 @@
     .skills-grid {
         grid-template-columns: repeat(2, 1fr);
     }
-}
-
-
-
-.skill-item--more {
-    justify-content: center;
-}
-
-.skill-more {
-    font-family: 'Atkinson Hyperlegible Mono', monospace;
-    font-size: 1rem;
-    font-weight: 600;
-    color: #555;
-    text-align: center;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
 }

@@ -6,7 +6,7 @@ header {
     box-shadow: 0 1px 0 rgba(0, 0, 0, 0.08);
     position: fixed;
     width: 100%;
-    top: 0px;
+    top: 0;
     z-index: 100;
     transition: top 1.0s ease;
 }
@@ -14,7 +14,7 @@ header {
 .navbar {
     display: flex;
     align-items: center;
-    padding: 20px var(--padding-container);
+    padding: 16px var(--padding-container);
 }
 
 .nav-links {
@@ -28,24 +28,22 @@ header {
 .nav-links a {
     text-transform: uppercase;
     text-decoration: none;
-    font-family: 'Atkinson Hyperlegible Mono', monospace;
     font-weight: 600;
     color: var(--accent-color-orange);
     font-size: small;
     padding: 0 var(--spacing-medium);
     display: inline-block;
-    background-color: transparent;
-    border-radius: var(--border-radius);
-    transition: background-color 0.25s ease;
+    transition: transform 0.2s ease;
 }
 
 .nav-links a:hover {
-    background-color: rgba(248, 120, 40, 0.1);
+    transform: translateY(-2px);
 }
 
 .nav-links a.nav-cta {
     background-color: var(--accent-color-orange);
-    color: white;
+    color: var(--color-card);
+    border-radius: var(--border-radius);
     padding-top: 6px;
     padding-bottom: 6px;
     margin-top: -6px;
@@ -54,6 +52,7 @@ header {
 
 .nav-links a.nav-cta:hover {
     opacity: 0.85;
+    transform: none;
 }
 
 .hamburger {
@@ -98,7 +97,7 @@ header {
     width: 100%;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 768px) {
     .hamburger {
         display: flex;
     }
@@ -110,7 +109,7 @@ header {
         top: 100%;
         left: 0;
         width: 100%;
-        background-color: rgba(255, 255, 255, 0.95);
+        background-color: rgba(255, 255, 255, 0.97);
         backdrop-filter: blur(12px);
         padding: var(--spacing-large);
         gap: var(--spacing-medium);
@@ -119,5 +118,17 @@ header {
 
     .nav-links.open {
         display: flex;
+    }
+
+    .nav-links a {
+        font-size: 1rem;
+        padding: var(--spacing-small) 0;
+    }
+
+    .nav-links a.nav-cta {
+        display: inline-block;
+        margin-top: var(--spacing-small);
+        padding: 10px 20px;
+        text-align: center;
     }
 }
