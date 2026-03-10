@@ -30,11 +30,11 @@
         <nav class="navbar">
 
             <ul class="nav-links">
-                <li><a href="#about">About</a></li>
-                <li><a href="#projects">Project</a></li>
+                <li><a href="#about">Om mig</a></li>
+                <li><a href="#projects">Projekt</a></li>
                 <li><a href="#skills">Tech Stack</a></li>
-                <li><a href="#testimonials">Testimonials</a></li>
-                <li><a href="#contact" class="nav-cta">Contact</a></li>
+                <li><a href="#testimonials">Omdömen</a></li>
+                <li><a href="#contact" class="nav-cta">Kontakt</a></li>
                 
                 
             </ul>
@@ -56,11 +56,11 @@
                 <div class="hero-content">
                     <div class="hero-text">
                         <h1 class="hero-name">Sara Lindh</h1>
-                        <p class="hero-tagline">Aspiring <strong>.NET cloud developer</strong> based in Gothenburg
-with a background in leadership and business operations.
-I enjoy <strong>solving problems</strong> and approaching challenges from multiple perspectives: technical, human and business <i class="fa fa-line-chart" aria-hidden="true"></i>
+                        <p class="hero-tagline">Blivande <strong>.NET-molnutvecklare</strong> baserad i Göteborg
+med bakgrund inom ledarskap och verksamhetsutveckling.
+Jag drivs av att <strong>lösa problem</strong> och angripa utmaningar från flera perspektiv: tekniskt, mänskligt och affärsmässigt <i class="fa fa-line-chart" aria-hidden="true"></i>
                         </p>
-                        <p class="hero-scroll">Scroll down to see my work <i class="fa fa-arrow-circle-o-down" aria-hidden="true"></i></p>
+                        <p class="hero-scroll">Scrolla ner för att se mitt arbete <i class="fa fa-arrow-circle-o-down" aria-hidden="true"></i></p>
                     </div>
                 </div>
             </div>
@@ -147,7 +147,7 @@ Idag utforskar jag hur teknik, affär och mänskligt beteende kan mötas för at
         
         <section id="projects" class="section-projects">
             <div class="container">
-                <h2>Project</h2>
+                <h2>Projekt</h2>
                 <div class="projects-grid">
                     <div class="project-card">
                         <div class="project-card-image">
@@ -203,7 +203,7 @@ Idag utforskar jag hur teknik, affär och mänskligt beteende kan mötas för at
         
         <section id="skills" class="section-skills">
             <div class="container">
-                <h2>Tech Stack</h2>
+                <h2>Tech stack</h2>
                 <div class="skills-grid">
                     <div class="skill-item">
                         <i class="devicon-csharp-plain colored"></i>
@@ -230,7 +230,7 @@ Idag utforskar jag hur teknik, affär och mänskligt beteende kan mötas för at
                         <span>.NET</span>
                     </div>
                     <div class="skill-item skill-item--more">
-                        <span class="skill-more">& more<br>coming...</span>
+                        <span class="skill-more">Mer på<br>väg...</span>
                     </div>
                 </div>
             </div>
@@ -239,7 +239,7 @@ Idag utforskar jag hur teknik, affär och mänskligt beteende kan mötas för at
         
         <section id="testimonials" class="section-testimonials">
         <div class="container">
-            <h2>Testimonials</h2>
+            <h2>Omdömen</h2>
             <div class="testimonials-grid">
                 <div class="testimonial-card">
                     <p class="testimonial-quote">&ldquo;Sara är en av de mest driven och noggranna personer jag jobbat med. Hon tar tag i problem direkt och levererar alltid med hög kvalitet.&rdquo;</p>
@@ -264,9 +264,23 @@ Idag utforskar jag hur teknik, affär och mänskligt beteende kan mötas för at
         
         <section id="contact" class="section-contact">
             <div class="container">
-                <h2>Contact</h2>
+                <h2>Kontakt</h2>
                 <div class="contact-content">
-                    <form class="contact-form"></form>
+                    <form class="contact-form">
+                        <div class="form-group">
+                            <label for="name">Namn</label>
+                            <input type="text" id="name" name="name" placeholder="Ditt namn">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">E-post</label>
+                            <input type="email" id="email" name="email" placeholder="din@epost.se">
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Meddelande</label>
+                            <textarea id="message" name="message" placeholder="Skriv ditt meddelande..."></textarea>
+                        </div>
+                        <button type="submit" class="form-submit">Skicka &rarr;</button>
+                    </form>
                 </div>
             </div>
         </section>
@@ -276,7 +290,13 @@ Idag utforskar jag hur teknik, affär och mänskligt beteende kan mötas för at
     
     <footer>
         <div class="container">
-            <div class="footer-content"></div>
+            <div class="footer-content">
+                <p class="footer-copy">&copy; 2026 Sara Lindh</p>
+                <div class="footer-social">
+                    <a href="https://github.com/" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="devicon-github-original"></i></a>
+                    <a href="https://www.linkedin.com/in/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="devicon-linkedin-plain"></i></a>
+                </div>
+            </div>
         </div>
     </footer>
 
