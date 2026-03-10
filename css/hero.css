@@ -4,6 +4,7 @@
     background-size: 300% 300%;
     animation: gradientShift 7s ease infinite;
     position: relative;
+    overflow: hidden;
     min-height: 100vh;
     display: flex;
     align-items: center;

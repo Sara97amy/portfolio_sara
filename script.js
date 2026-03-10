@@ -39,3 +39,27 @@ window.addEventListener('scroll', () => {
     heroScroll.style.opacity = Math.max(0, 1 - y / 200);
 
 }, { passive: true }); // passive: true förbättrar scroll-prestanda
+
+// ── Aktiv navbar-länk vid scroll ─────────────────────────────────────────────
+
+const navSections = document.querySelectorAll('section[id]');
+const navAnchors = document.querySelectorAll('.nav-links a[href^="#"]');
+
+function updateActiveLink() {
+    // Hitta sektionen vars topp är närmast under navbaren (60px offset)
+    const scrollY = window.pageYOffset + 80;
+
+    let current = '';
+    navSections.forEach(section => {
+        if (section.offsetTop <= scrollY) {
+            current = section.id;
+        }
+    });
+
+    navAnchors.forEach(a => {
+        a.classList.toggle('active', a.getAttribute('href') === `#${current}`);
+    });
+}
+
+window.addEventListener('scroll', updateActiveLink, { passive: true });
+updateActiveLink();
