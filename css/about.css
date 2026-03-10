@@ -210,3 +210,7 @@
         font-size: 0.75rem;
     }
 }
+
+.about-text p + p {
+    margin-top: var(--spacing-medium);
+}
