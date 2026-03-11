@@ -17,8 +17,6 @@ Personlig portfoliosida byggd med HTML, CSS och JavaScript. Sidan presenterar mi
 - CSS3 (CSS Grid, Flexbox, Custom Properties, animationer)
 - JavaScript (Fetch API, parallax, mobil-navigation)
 - [Web3Forms](https://web3forms.com/) för formulärhantering
-- [Font Awesome](https://fontawesome.com/) och [Devicons](https://devicon.dev/) för ikoner
-- [Atkinson Hyperlegible Mono](https://fonts.google.com/specimen/Atkinson+Hyperlegible+Mono) (Google Fonts)
 
 ## Mappstruktur
 
