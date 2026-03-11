@@ -49,11 +49,6 @@
     resize: none;
 }
 
-.form-group input::placeholder,
-.form-group textarea::placeholder {
-    opacity: 0.45;
-}
-
 .form-group input:focus,
 .form-group textarea:focus {
     border-color: var(--accent-color-orange);
@@ -67,7 +62,7 @@
     border-radius: var(--border-radius);
     padding: 12px 28px;
     font-family: 'Atkinson Hyperlegible Mono', monospace;
-    font-size: 0.9rem;
+    font-size: 1rem;
     font-weight: 600;
     cursor: pointer;
     transition: opacity 0.2s ease;
