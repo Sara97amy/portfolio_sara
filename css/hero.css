@@ -1,4 +1,3 @@
-
 .hero {
     background: linear-gradient(135deg, #ff6b6b, #ffb66b, #ff8c6b, #ffb66b);
     background-size: 300% 300%;
@@ -14,6 +13,7 @@
     padding-right: var(--spacing-medium);
 }
 
+
 .hero-content {
     text-align: center;
     display: flex;
@@ -27,11 +27,13 @@
     width: 100%;
 }
 
+
 .hero-name {
     font-size: clamp(2.2rem, 8vw, 6rem);
     font-weight: 700;
     color: rgba(255, 255, 255, 0.95);
 }
+
 
 .hero-tagline {
     font-size: clamp(0.95rem, 3vw, 1.4rem);
@@ -40,6 +42,7 @@
     text-align: center;
 }
 
+
 .hero-scroll {
     margin-top: var(--spacing-large);
     color: rgba(255, 255, 255, 0.85);
@@ -47,17 +50,20 @@
     will-change: opacity, transform;
 }
 
+
 @keyframes gradientShift {
     0%   { background-position: 0% 50%; }
     50%  { background-position: 100% 50%; }
     100% { background-position: 0% 50%; }
 }
 
+
 @keyframes sway {
     0%   { transform: translateY(0); }
     50%  { transform: translateY(8px); }
     100% { transform: translateY(0); }
 }
+
 
 .hero .container {
     align-items: center;
