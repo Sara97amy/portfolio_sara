@@ -1,5 +1,6 @@
 # Portfolio – Sara Lindh
 
+
 Personlig portfoliosida byggd med HTML, CSS och JavaScript. Sidan presenterar mig, mina projekt, min tekniska kompetens och mina kontaktuppgifter.
 
 ## Innehåll
