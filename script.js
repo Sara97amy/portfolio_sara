@@ -51,6 +51,10 @@ updateActiveLink();
 const form = document.getElementById('form');
 const submitBtn = form.querySelector('button[type="submit"]');
 
+window.addEventListener('pageshow', (e) => {
+    if (e.persisted) form.reset();
+});
+
 form.addEventListener('submit', async (e) => {
     e.preventDefault();
 
