@@ -15,18 +15,20 @@
     justify-content: space-between;
     gap: var(--spacing-medium);
     padding: var(--spacing-large);
-    background-color: var(--color-card);
+    
     border-radius: var(--border-radius-card);
-    box-shadow: var(--shadow-card);
+    
 }
 
 .testimonial-quote {
-    font-size: 1rem;
+   
+    font-size: 1.4rem;
     line-height: 1.7;
 }
 
 .testimonial-author {
-    font-size: 0.8rem;
+   
+    font-size: 1rem;
     font-weight: 600;
     color: var(--accent-color-orange);
     text-transform: uppercase;
