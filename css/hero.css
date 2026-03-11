@@ -70,3 +70,15 @@
     padding-top: 0;
     padding-bottom: 0;
 }
+
+
+@media (prefers-reduced-motion: reduce) {
+    .hero {
+        animation: none;
+        background-position: 0% 50%;
+    }
+
+    .hero-scroll {
+        animation: none;
+    }
+}
