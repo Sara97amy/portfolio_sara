@@ -18,6 +18,12 @@
     display: flex;
     flex-direction: column;
     height: 100%;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.project-card:hover {
+    transform: scale(1.03);
+    box-shadow: 0 8px 32px rgba(248, 120, 40, 0.18);
 }
 
 .project-card-image {
@@ -36,13 +42,14 @@
     height: 100%;
     object-fit: cover;
     display: block;
-    border-radius: 10px;
+    border-radius: var(--border-radius-card);
     box-shadow: var(--shadow-card);
-    transition: transform 0.3s ease;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .project-card:hover .project-card-image img {
-    transform: scale(1.04);
+    transform: scale(1.03);
+    box-shadow: 0 8px 32px rgba(248, 120, 40, 0.18);
 }
 
 .project-card-body {
@@ -80,11 +87,18 @@
 }
 
 .project-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
     font-size: 0.75rem;
     color: var(--color-text-muted);
     background-color: var(--background-color-1);
     border-radius: 99px;
     padding: 4px 12px;
+}
+
+.project-tag i {
+    font-size: 1rem;
 }
 
 .project-link {
@@ -98,16 +112,52 @@
 }
 
 .project-link:hover {
-    text-decoration: underline;
+    opacity: 0.85;
 }
 
 @media (max-width: 768px) {
     .projects-grid {
         grid-template-columns: 1fr;
         grid-auto-rows: auto;
+        gap: var(--spacing-medium);
     }
 
     .project-card-image {
         height: auto;
+        max-height: 220px;
+        padding: var(--spacing-medium);
+        padding-bottom: 6px;
+    }
+
+    .project-card-body {
+        padding: var(--spacing-medium);
+    }
+
+    /* Disable scale hover on touch — avoids layout jumps */
+    .project-card:hover {
+        transform: none;
+        box-shadow: var(--shadow-card);
+    }
+
+    .project-card:hover .project-card-image img {
+        transform: none;
+        box-shadow: var(--shadow-card);
+    }
+}
+
+@media (max-width: 480px) {
+    .project-card-image {
+        max-height: 180px;
+        padding: var(--spacing-small);
+        padding-bottom: 4px;
+    }
+
+    .project-card-body {
+        padding: var(--spacing-small) var(--spacing-medium);
+        gap: 6px;
+    }
+
+    .project-title {
+        font-size: 1rem;
     }
 }

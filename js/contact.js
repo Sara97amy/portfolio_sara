@@ -9,7 +9,7 @@ form.addEventListener('submit', async (e) => {
 
     const originalText = submitBtn.textContent;
 
-    submitBtn.textContent = "Sending...";
+    submitBtn.textContent = "Skickar...";
     submitBtn.disabled = true;
 
     try {
@@ -21,16 +21,21 @@ form.addEventListener('submit', async (e) => {
         const data = await response.json();
 
         if (response.ok) {
-            alert("Success! Your message has been sent.");
+            alert("Tack! Ditt meddelande har skickats.");
             form.reset();
         } else {
-            alert("Error: " + data.message);
+            alert("Något gick fel: " + data.message);
         }
 
     } catch (error) {
-        alert("Something went wrong. Please try again.");
+        alert("Det gick inte att skicka. Försök igen.");
     } finally {
         submitBtn.textContent = originalText;
         submitBtn.disabled = false;
     }
+});
+
+// Återställ formuläret om användaren går tillbaka med webbläsarens bakåtknapp
+window.addEventListener('pageshow', (e) => {
+    if (e.persisted) form.reset();
 });

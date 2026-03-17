@@ -1,0 +1,146 @@
+/* ── Arbetslivserfarenhet-sektionen ────────────────── */
+
+.section-background {
+    background-color: var(--background-color-1);
+}
+
+.section-background h2:not(:first-child) {
+    margin-top: var(--spacing-section);
+}
+
+/* Tidslinje för arbetslivserfarenheter */
+
+.timeline {
+    position: relative;
+    padding-left: 24px;
+    overflow: hidden;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 4px;
+    top: 0.55em;
+    bottom: 0;
+    width: 2px;
+    background: var(--accent-color-orange);
+}
+
+.timeline-item {
+    min-width: 0;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 0 10px;
+    margin-bottom: var(--spacing-medium);
+    position: relative;
+}
+
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -20px;
+    top: 0.55em;
+    width: 20px;
+    height: 2px;
+    background: var(--accent-color-orange);
+}
+
+.timeline-year {
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--accent-color-orange);
+}
+
+.timeline-content h3 {
+    margin-top: 0;
+    margin-bottom: 2px;
+    font-size: 0.9rem;
+}
+
+.timeline-content p {
+    font-size: 0.82rem;
+    opacity: 0.7;
+    line-height: 1.5;
+    padding-top: 2px;
+}
+
+/* Meriter och övrigt */
+
+.merits-list {}
+
+.merit-item {
+    display: grid;
+    grid-template-columns: 260px 1fr;
+    gap: 0 var(--spacing-medium);
+    padding: 10px 0;
+    border-bottom: 1px solid var(--background-color-2);
+}
+
+.merit-item:first-child {
+    border-top: 1px solid var(--background-color-2);
+}
+
+.merit-label {
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--accent-color-orange);
+}
+
+.merit-value {
+    font-size: 0.8rem;
+    opacity: 0.75;
+    line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+    /* Tidslinje på mobil: kortlayout utan sidolinje */
+    .timeline {
+        padding-left: 0;
+        overflow: visible;
+    }
+
+    .timeline::before {
+        display: none;
+    }
+
+    .timeline-item {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+        margin-bottom: var(--spacing-large);
+        padding: var(--spacing-medium);
+        background-color: var(--background-color-2);
+        border-radius: var(--border-radius);
+        position: static;
+    }
+
+    .timeline-item::before {
+        display: none;
+    }
+
+    .timeline-year {
+        font-size: 0.72rem;
+    }
+
+    .timeline-content h3 {
+        font-size: 0.85rem;
+        line-height: 1.4;
+        margin-top: 0;
+    }
+
+    .timeline-content p {
+        font-size: 0.8rem;
+    }
+
+    .merit-item {
+        grid-template-columns: 1fr;
+        gap: 2px 0;
+        padding: 12px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .timeline-year {
+        font-size: 0.75rem;
+    }
+}

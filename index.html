@@ -8,14 +8,16 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Mono:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Mono:ital,wght@0,200..800;1,200..800&family=Caveat:wght@700&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/navbar.css">
     <link rel="stylesheet" href="css/hero.css">
     <link rel="stylesheet" href="css/about.css">
-    <link rel="stylesheet" href="css/projects.css">
+    <link rel="stylesheet" href="css/education.css">
+    <link rel="stylesheet" href="css/experience.css">
     <link rel="stylesheet" href="css/skills.css">
+    <link rel="stylesheet" href="css/projects.css">
     <link rel="stylesheet" href="css/testimonials.css">
     <link rel="stylesheet" href="css/contact.css">
     <link rel="stylesheet" href="css/footer.css">
@@ -23,9 +25,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon/devicon.min.css">
 
-    <script src="js/nav.js" defer></script>
-    <script src="js/parallax.js" defer></script>
+    <script src="js/navbar.js" defer></script>
     <script src="js/contact.js" defer></script>
+    <script src="js/weather.js" defer></script>
 </head>
 
 <body>
@@ -34,8 +36,10 @@
         <nav class="navbar">
             <ul class="nav-links">
                 <li><a href="#about">Om mig</a></li>
+                <li><a href="#education">Utbildning</a></li>
+                <li><a href="#skills">Kompetenser</a></li>
                 <li><a href="#projects">Projekt</a></li>
-                <li><a href="#skills">Kunskap</a></li>
+                <li><a href="#background">Erfarenhet</a></li>
                 <li><a href="#testimonials">Omdömen</a></li>
                 <li><a href="#contact" class="nav-cta">Kontakt</a></li>
             </ul>
@@ -53,12 +57,16 @@
             <div class="container">
                 <div class="hero-content">
                     <div class="hero-text">
+                        <p class="hero-label">Blivande .NET-molnutvecklare · Göteborg</p>
                         <h1 class="hero-name">Sara Lindh</h1>
-                        <p class="hero-tagline">Blivande <strong>.NET-molnutvecklare</strong> baserad i Göteborg
-med bakgrund inom ledarskap och affärsutveckling.
-Jag drivs av att <strong>lösa problem</strong> och angripa utmaningar från flera perspektiv: tekniskt, mänskligt och affärsmässigt <i class="fa fa-line-chart" aria-hidden="true"></i>
-                        </p>
-                        <p class="hero-scroll">Scrolla ner för att se mitt arbete <i class="fa fa-arrow-circle-o-down" aria-hidden="true"></i></p>
+                        <p class="hero-tagline">Med bakgrund inom ledarskap och affärsutveckling drivs jag av att lösa problem från flera perspektiv — tekniskt, mänskligt och affärsmässigt.</p>
+                        <div class="hero-bottom">
+                            <a href="#contact" class="hero-lia-btn">Söker LIA hösten 2026</a>
+                            <a href="docs/cv.pdf" download class="hero-cv-btn"><i class="fa fa-download"></i> Ladda ner CV</a>
+                        </div>
+                    </div>
+                    <div class="hero-image">
+                        <img src="images/profil.jpg" alt="Sara Lindh">
                     </div>
                 </div>
             </div>
@@ -67,77 +75,376 @@ Jag drivs av att <strong>lösa problem</strong> och angripa utmaningar från fle
         <section id="about" class="section-about">
             <div class="container">
                 <h2>Om mig</h2>
-
                 <div class="about-content">
                     <div class="about-text">
-                        <p>Jag kommer från en bakgrund inom retail där jag arbetat nära människor, processer och affärsutveckling. Det har gett mig ett öga för helheten &ndash; och ett genuint intresse för hur system och beslut hänger ihop.</p>
-                        <p>Med tiden växte en nyfikenhet kring tekniken bakom systemen jag använde. Jag ville inte bara förstå dem &ndash; jag ville bygga dem. Det blev starten på min resa in i utveckling.</p>
-                        <p>Idag siktar jag på att kombinera min affärserfarenhet med teknisk kompetens för att bygga lösningar som faktiskt gör skillnad.</p>
-                    </div>
-                    <div class="about-image">
-                        <img src="images/profilbildfyrkant.jpg" alt="Profilbild Sara Lindh">
+                        <p>Social, nyfiken och full av energi &ndash; med ett genuint intresse för att förstå hur saker fungerar på riktigt. Jag kommer från retail där jag arbetat som franchisetagare, butikschef och avdelningschef med ansvar för människor, resultat och affär.</p>
+                        <p>Det var i de systemen jag jobbade i varje dag som intresset för teknik växte fram. Idag studerar jag .NET-molnutveckling på Jensen YH och tar med mig ett perspektiv där användare, flöden och verklighet alltid är i centrum.</p>
+                        <p class="about-signature">Hälsningar Sara Lindh</p>
                     </div>
                 </div>
+            </div>
+        </section>
 
-                <h2>Arbetslivserfarenheter</h2>
-
-                <div class="timeline">
-                    <div class="timeline-item">
-                        <span class="timeline-year">2023</span>
-                        <div class="timeline-content">
-                            <h3>Avdelningschef Hår & Skönhet, Nordiska Kompaniet</h3>
-                            <p>Helhetsansvar för avdelningens resultat, drift och utveckling med personalansvar för 18 medarbetare. Säkerställde hög kvalitet i försäljning och service genom ett coachande och närvarande ledarskap. Arbetade strategiskt och operativt med inköp, resultatuppföljning och analys samt ansvarade för rekrytering, schemaläggning och avtalshantering. Planerade och genomförde marknadsaktiviteter samt projektledde flera event.
-</p>
-                        </div>
-                    </div>
-                    <div class="timeline-item">
-                        <span class="timeline-year">2020</span>
-                        <div class="timeline-content">
-                            <h3>Franchisetagare / Butiksägare, Pressbyrån Norra hamngatan </h3>
-                            <p>Etablerade och drev verksamheten med fullt operativt ansvar för bolagets ekonomi, budget, redovisning och uppföljning samt inköp, lager, inventering och personal. Arbetade strategiskt med att utveckla verksamheten genom ökad tillväxt, stärkt lönsamhet och effektivare arbetssätt. Var vid tillträdet koncernens yngsta franchisetagare och utsågs till årets butik i Göteborgsregionen 2022.</p>
-</p>
-                        </div>
-                    </div>
-                    <div class="timeline-item">
-                        <span class="timeline-year">2016</span>
-                        <div class="timeline-content">
-                            <h3>Butikschef Pressbyrån Göteborg C</h3>
-                            <p>Ansvarade för den dagliga driften inklusive arbetsledning, delegering och utbildning av personal. Hanterade löpande operativa inköp inom flera produktkategorier samt följde upp och rapporterade försäljningsresultat till butiksägaren.
-</p>
-                        </div>
-                    </div>
-                    <div class="timeline-item">
-                        <span class="timeline-year">2013</span>
-                        <div class="timeline-content">
-                            <h3>Övriga arbetslivserfarenheter</h3>
-                            <p>Tidigare erfarenhet från flera roller inom service, bland annat inom café, restaurang, kiosk och dagligvaruhandel. </p>
-                        </div>
-                    </div>
-                </div>
-
+        <section id="education" class="section-education">
+            <div class="container">
                 <h2>Utbildning</h2>
+                <div class="edu-card">
+                    <div class="edu-card-header">
+                        <div class="edu-card-header-top">
+                            <div class="edu-card-header-text">
+                                <span class="edu-badge">Pågående · 2025–2027</span>
+                                <h2>.NET-utvecklare med molninriktning</h2>
+                                <p class="edu-school">Jensen Yrkeshögskola</p>
+                                <p class="edu-intro">Tvåårig yrkeshögskoleutbildning med fokus på systemutveckling i .NET-ekosystemet, backend-arkitektur och molntjänster i Azure. Utbildningen varvar teori med praktiska projekt och två perioder av LIA (lärande i arbete).</p>
+                            </div>
+                            <a href="https://www.jensenyh.se/" target="_blank" rel="noopener noreferrer"><img src="images/skola-jensen.png" alt="Jensen Education" class="edu-school-logo"></a>
+                        </div>
+                    </div>
+                    <div class="edu-card-divider"></div>
+                    <div class="course-list">
 
-                <div class="education-tags">
-                    <span class="education-tag education-tag--current"><span class="education-tag-current-label">Pågående <br> 2025-2027</span><span class="education-tag-current-content"><span class="education-tag-program">.NET-utvecklare med molninriktning</span><span class="education-tag-school">Jensen Yrkeshögskola</span><span class="education-tag-desc">Systemutveckling, molntjänster och .NET-ekosystemet</span><a href="docs/kursöversikt.pdf" download class="education-tag-download"><i class="fa fa-download" aria-hidden="true"></i> Ladda ner komplett kursöversikt PDF </a></span></span>
-                    <span class="education-tag"><span class="education-tag-program">Ledarskapsutbildning &middot; 2024</span><span class="education-tag-school">Nordiska Kompaniet</span><span class="education-tag-desc">Service i världsklass</span></span>
-                    <span class="education-tag"><span class="education-tag-program">Diplomutbildning &middot; 2023</span><span class="education-tag-school">Katrineberg Folkhögskola</span><span class="education-tag-desc">Motiverande samtal</span></span>
-                    <span class="education-tag"><span class="education-tag-program">Ledarskapsutbildning &middot; 2022</span><span class="education-tag-school">Reitan Convenience Academy</span><span class="education-tag-desc">Situationsanpassat ledarskap</span></span>
-                    <span class="education-tag"><span class="education-tag-program">Köpmansutbildning &middot; 2020</span><span class="education-tag-school">Reitan Convenience Academy</span><span class="education-tag-desc">Inköpsstrategier, arbetsrätt, rekrytering, ledarskap, företagsekonomi, marknadsföring, redovisning, intern oärlighet</span></span>
-                    <span class="education-tag"><span class="education-tag-program">Diplomutbildning &middot; 2019</span><span class="education-tag-school">Art College Göteborg</span><span class="education-tag-desc">Grafisk design</span></span>
-                    <span class="education-tag"><span class="education-tag-program">Handel &amp; Entrepenörskap &middot; 2013&ndash;2016</span><span class="education-tag-school">Jensen Gymnasium</span><span class="education-tag-desc">3-årig gymnasieutbildning</span></span>
+                        <details class="course-row">
+                            <summary class="course-row-summary">
+                                <span>Självledarskap – att leda sig själv, grund</span>
+                                <i class="fa fa-chevron-down"></i>
+                            </summary>
+                            <div class="course-row-body">
+                                <p>Självmotivation och attitydutveckling — metoder för att prestera och utvecklas under studietiden och i arbetslivet.</p>
+                                <div class="course-chips">
+                                    <span class="course-chip">🎯 Självmotivation</span>
+                                    <span class="course-chip">💪 Attitydutveckling</span>
+                                </div>
+                            </div>
+                        </details>
+
+                        <details class="course-row">
+                            <summary class="course-row-summary">
+                                <span>Programmering med C# och .NET, grund</span>
+                                <i class="fa fa-chevron-down"></i>
+                            </summary>
+                            <div class="course-row-body">
+                                <p>C#-syntax, OOP med klasser, arv och interface, versionshantering med Git samt en introduktion till branschen och yrkesrollen.</p>
+                                <div class="course-chips">
+                                    <span class="course-chip"><i class="devicon-csharp-plain colored"></i> C#</span>
+                                    <span class="course-chip"><i class="devicon-dot-net-plain colored"></i> .NET</span>
+                                    <span class="course-chip"><i class="devicon-github-original colored"></i> Git</span>
+                                    <span class="course-chip">🏗️ OOP</span>
+                                </div>
+                            </div>
+                        </details>
+
+                        <details class="course-row">
+                            <summary class="course-row-summary">
+                                <span>Agil projektledning &amp; ämnesövergripande projekt</span>
+                                <i class="fa fa-chevron-down"></i>
+                            </summary>
+                            <div class="course-row-body">
+                                <p>Agila metoder i praktiken: kravhantering, sprint-planering, tvärfunktionella projekt och förståelse för konsultrollen.</p>
+                                <div class="course-chips">
+                                    <span class="course-chip">🔄 Scrum</span>
+                                    <span class="course-chip">📋 Kravhantering</span>
+                                    <span class="course-chip">💼 Konsultrollen</span>
+                                </div>
+                            </div>
+                        </details>
+
+                        <details class="course-row">
+                            <summary class="course-row-summary">
+                                <span>Databasteknik</span>
+                                <i class="fa fa-chevron-down"></i>
+                            </summary>
+                            <div class="course-row-body">
+                                <p>Databasdesign och datamodellering med SQL Server samt NoSQL — välj rätt teknik för rätt situation.</p>
+                                <div class="course-chips">
+                                    <span class="course-chip"><i class="devicon-microsoftsqlserver-plain colored"></i> SQL Server</span>
+                                    <span class="course-chip">🗄️ NoSQL</span>
+                                    <span class="course-chip">📐 Datamodellering</span>
+                                </div>
+                            </div>
+                        </details>
+
+                        <details class="course-row">
+                            <summary class="course-row-summary">
+                                <span>Molnutveckling med Azure</span>
+                                <i class="fa fa-chevron-down"></i>
+                            </summary>
+                            <div class="course-row-body">
+                                <p>Hela livscykeln för molnapplikationer i Azure — containers, mikrotjänster, serverless, CI/CD och DevOps.</p>
+                                <div class="course-chips">
+                                    <span class="course-chip"><i class="devicon-azure-plain colored"></i> Azure</span>
+                                    <span class="course-chip"><i class="devicon-docker-plain colored"></i> Containers</span>
+                                    <span class="course-chip">⚙️ CI/CD</span>
+                                    <span class="course-chip">🔄 DevOps</span>
+                                    <span class="course-chip">🧩 Mikrotjänster</span>
+                                </div>
+                            </div>
+                        </details>
+
+                        <details class="course-row">
+                            <summary class="course-row-summary">
+                                <span>Programmering med C# och .NET, fortsättning</span>
+                                <i class="fa fa-chevron-down"></i>
+                            </summary>
+                            <div class="course-row-body">
+                                <p>Fördjupad C#-utveckling: nätverksapplikationer, containermiljöer, driftsättning och AI som kodverktyg.</p>
+                                <div class="course-chips">
+                                    <span class="course-chip"><i class="devicon-csharp-plain colored"></i> C# avancerat</span>
+                                    <span class="course-chip"><i class="devicon-docker-plain colored"></i> Docker</span>
+                                    <span class="course-chip">🤖 AI-kodning</span>
+                                    <span class="course-chip">🚀 Driftsättning</span>
+                                </div>
+                            </div>
+                        </details>
+
+                        <details class="course-row">
+                            <summary class="course-row-summary">
+                                <span>Självledarskap – att leda sig själv, fortsättning</span>
+                                <i class="fa fa-chevron-down"></i>
+                            </summary>
+                            <div class="course-row-body">
+                                <p>Målsättning och beteendeförändring — metoder för att skapa vanor som ökar förmågan till självledarskap i yrkeslivet.</p>
+                                <div class="course-chips">
+                                    <span class="course-chip">🎯 Målsättning</span>
+                                    <span class="course-chip">🧭 Självledarskap</span>
+                                </div>
+                            </div>
+                        </details>
+
+                        <details class="course-row">
+                            <summary class="course-row-summary">
+                                <span>Säkerhet i molnutveckling</span>
+                                <i class="fa fa-chevron-down"></i>
+                            </summary>
+                            <div class="course-row-body">
+                                <p>Säker molnarkitektur med Identity &amp; Access Management (IAM), hotanalys och metoder för att bygga skyddade lösningar.</p>
+                                <div class="course-chips">
+                                    <span class="course-chip">🔐 IAM</span>
+                                    <span class="course-chip">🛡️ Säker arkitektur</span>
+                                    <span class="course-chip">🔑 Auth</span>
+                                </div>
+                            </div>
+                        </details>
+
+                        <details class="course-row">
+                            <summary class="course-row-summary">
+                                <span>Testning</span>
+                                <i class="fa fa-chevron-down"></i>
+                            </summary>
+                            <div class="course-row-body">
+                                <p>Testprocessen från planering till automation — testdesign, olika testtyper och QA integrerat i agila projekt.</p>
+                                <div class="course-chips">
+                                    <span class="course-chip">✅ Enhetstestning</span>
+                                    <span class="course-chip">🤖 Testautomation</span>
+                                    <span class="course-chip">📊 QA</span>
+                                </div>
+                            </div>
+                        </details>
+
+                        <details class="course-row">
+                            <summary class="course-row-summary">
+                                <span>Utveckling av webbapplikationer</span>
+                                <i class="fa fa-chevron-down"></i>
+                            </summary>
+                            <div class="course-row-body">
+                                <p>HTML, CSS, JavaScript och ASP.NET för responsiva webbplatser. Kännedom om frontend-ramverk som React, Angular och Vue.js.</p>
+                                <div class="course-chips">
+                                    <span class="course-chip"><i class="devicon-html5-plain colored"></i> HTML</span>
+                                    <span class="course-chip"><i class="devicon-css3-plain colored"></i> CSS</span>
+                                    <span class="course-chip"><i class="devicon-javascript-plain colored"></i> JavaScript</span>
+                                    <span class="course-chip"><i class="devicon-dot-net-plain colored"></i> ASP.NET</span>
+                                    <span class="course-chip">⚛️ Ramverk</span>
+                                </div>
+                            </div>
+                        </details>
+
+                        <details class="course-row">
+                            <summary class="course-row-summary">
+                                <span>Lärande i arbete 1</span>
+                                <i class="fa fa-chevron-down"></i>
+                            </summary>
+                            <div class="course-row-body">
+                                <p>Första praktikperioden i verklig miljö — yrkesrollen som .NET-utvecklare i praktiken med verktyg, metoder och samarbete i faktiska projekt.</p>
+                                <div class="course-chips">
+                                    <span class="course-chip">🏢 Praktik</span>
+                                    <span class="course-chip">🔧 Verkliga projekt</span>
+                                    <span class="course-chip">🤝 Teamarbete</span>
+                                </div>
+                            </div>
+                        </details>
+
+                        <details class="course-row">
+                            <summary class="course-row-summary">
+                                <span>Lärande i arbete 2</span>
+                                <i class="fa fa-chevron-down"></i>
+                            </summary>
+                            <div class="course-row-body">
+                                <p>Fördjupad praktik med självständigt ansvar — komplexa uppgifter, tvärfunktionellt samarbete och förbättringsarbete i yrkesrollen.</p>
+                                <div class="course-chips">
+                                    <span class="course-chip">🏢 Självständig roll</span>
+                                    <span class="course-chip">🚀 Komplexa uppgifter</span>
+                                    <span class="course-chip">🤝 Samarbete</span>
+                                </div>
+                            </div>
+                        </details>
+
+                        <details class="course-row">
+                            <summary class="course-row-summary">
+                                <span>Examensarbete</span>
+                                <i class="fa fa-chevron-down"></i>
+                            </summary>
+                            <div class="course-row-body">
+                                <p>Självständigt fördjupningsarbete inom .NET-utveckling med systematisk analys och skriftlig presentation av resultatet.</p>
+                                <div class="course-chips">
+                                    <span class="course-chip">🔍 Analys</span>
+                                    <span class="course-chip">📝 Dokumentation</span>
+                                    <span class="course-chip">🧠 Självständighet</span>
+                                </div>
+                            </div>
+                        </details>
+
+                    </div>
+                    <div class="edu-card-footer">
+                        <a href="docs/kursöversikt.pdf" download class="education-tag-download"><i class="fa fa-download" aria-hidden="true"></i> Ladda ner komplett kursöversikt PDF</a>
+                    </div>
                 </div>
 
-                <h2>Övrigt &amp; Meriter</h2>
+                <details class="edu-other-toggle">
+                    <summary class="edu-other-summary">
+                        <span>Övriga utbildningar</span>
+                        <i class="fa fa-chevron-down"></i>
+                    </summary>
+                    <div class="edu-other-body">
+                        <div class="edu-accordion">
+                            <details class="accordion-item">
+                                <summary class="accordion-summary">
+                                    <span class="accordion-title">Ledarskap</span>
+                                    <span class="accordion-chevron">›</span>
+                                </summary>
+                                <div class="accordion-body">
+                                    <div class="accordion-sub-item">
+                                        <span class="accordion-sub-meta">Nordiska Kompaniet · 2024</span>
+                                        <span class="accordion-sub-title">Ledarskapsutbildning – Service i världsklass</span>
+                                    </div>
+                                    <div class="accordion-sub-item">
+                                        <span class="accordion-sub-meta">Reitan Convenience Academy · 2022</span>
+                                        <span class="accordion-sub-title">Ledarskapsutbildning – Situationsanpassat ledarskap</span>
+                                    </div>
+                                    <div class="accordion-sub-item">
+                                        <span class="accordion-sub-meta">Reitan Convenience Academy · 2020</span>
+                                        <span class="accordion-sub-title">Köpmansutbildning – Ledarskap, rekrytering, arbetsrätt m.m.</span>
+                                    </div>
+                                </div>
+                            </details>
+                            <details class="accordion-item">
+                                <summary class="accordion-summary">
+                                    <span class="accordion-title">Kommunikation</span>
+                                    <span class="accordion-chevron">›</span>
+                                </summary>
+                                <div class="accordion-body">
+                                    <div class="accordion-sub-item">
+                                        <span class="accordion-sub-meta">Katrineberg Folkhögskola · 2023</span>
+                                        <span class="accordion-sub-title">Diplomutbildning – Motiverande samtal</span>
+                                    </div>
+                                </div>
+                            </details>
+                            <details class="accordion-item">
+                                <summary class="accordion-summary">
+                                    <span class="accordion-title">Grafisk design</span>
+                                    <span class="accordion-chevron">›</span>
+                                </summary>
+                                <div class="accordion-body">
+                                    <div class="accordion-sub-item">
+                                        <span class="accordion-sub-meta">Art College Göteborg · 2019</span>
+                                        <span class="accordion-sub-title">Diplomutbildning – Grafisk design</span>
+                                    </div>
+                                </div>
+                            </details>
+                            <details class="accordion-item">
+                                <summary class="accordion-summary">
+                                    <span class="accordion-title">Gymnasium</span>
+                                    <span class="accordion-chevron">›</span>
+                                </summary>
+                                <div class="accordion-body">
+                                    <div class="accordion-sub-item">
+                                        <span class="accordion-sub-meta">Jensen Gymnasium · 2013–2016</span>
+                                        <span class="accordion-sub-title">Handel &amp; Entrepenörskap</span>
+                                    </div>
+                                </div>
+                            </details>
+                        </div>
+                    </div>
+                </details>
+            </div>
+        </section>
 
-                <div class="merits-list">
-                    <div class="merit-item"><span class="merit-label">Kassavana</span><span class="merit-value">Backofficesystem: Tableau, Shopflow, Hicore m.fl.</span></div>
-                    <div class="merit-item"><span class="merit-label">Microsoft Office</span><span class="merit-value">Goda kunskaper i Excel och Word</span></div>
-                    <div class="merit-item"><span class="merit-label">Adobe</span><span class="merit-value">Grundläggande kunskaper i Photoshop och InDesign</span></div>
-                    <div class="merit-item"><span class="merit-label">Språk</span><span class="merit-value">Mycket goda kunskaper engelska tal och skrift &mdash; Svenska modersmål</span></div>
-                    <div class="merit-item"><span class="merit-label">Årets butik 2022</span><span class="merit-value">Pressbyrån Västra Götalandsregionen</span></div>
-                    <div class="merit-item"><span class="merit-label">Årets UF-Företag 2015</span><span class="merit-value">Jensen Gymnasium</span></div>
-                    <div class="merit-item"><span class="merit-label">Mjuka värden</span><span class="merit-value">Positiv, nyfiken, social, lösningsorienterad, inkluderande, kommunikativ, värderingsstyrd</span></div>
-                </div>
+        <section id="skills" class="section-skills">
+            <div class="container">
+                <h2>Nuvarande &amp; kommande kompetenser</h2>
+                <div class="skills-grid">
+                    <div class="skill-item">
+                        <i class="devicon-csharp-plain colored"></i>
+                        <span>C#</span>
+                    </div>
+                    <div class="skill-item">
+                        <i class="devicon-dot-net-plain colored"></i>
+                        <span>ASP.NET</span>
+                    </div>
+                    <div class="skill-item">
+                        <i class="devicon-microsoftsqlserver-plain colored"></i>
+                        <span>SQL Server</span>
+                    </div>
+                    <div class="skill-item">
+                        <i class="devicon-azure-plain colored"></i>
+                        <span>Azure</span>
+                    </div>
+                    <div class="skill-item">
+                        <i class="devicon-docker-plain colored"></i>
+                        <span>Docker</span>
+                    </div>
+                    <div class="skill-item">
+                        <i class="devicon-html5-plain colored"></i>
+                        <span>HTML</span>
+                    </div>
+                    <div class="skill-item">
+                        <i class="devicon-css3-plain colored"></i>
+                        <span>CSS</span>
+                    </div>
+                    <div class="skill-item">
+                        <i class="devicon-javascript-plain colored"></i>
+                        <span>JavaScript</span>
+                    </div>
+                    <div class="skill-item">
+                        <i class="devicon-react-original colored"></i>
+                        <span>React</span>
+                    </div>
+                    <div class="skill-item">
+                        <i class="devicon-github-original colored"></i>
+                        <span>Git &amp; GitHub</span>
+                    </div>
+                    <div class="skill-item">
+                        <i class="fa fa-shield" style="font-size:2.5rem; color: var(--accent-color-orange);"></i>
+                        <span>Säkerhet &amp; IAM</span>
+                    </div>
+                    <div class="skill-item">
+                        <i class="fa fa-refresh" style="font-size:2.5rem; color: var(--accent-color-orange);"></i>
+                        <span>CI/CD &amp; DevOps</span>
+                    </div>
+                    <div class="skill-item">
+                        <i class="fa fa-check-square-o" style="font-size:2.5rem; color: var(--accent-color-orange);"></i>
+                        <span>Testning &amp; QA</span>
+                    </div>
+                    <div class="skill-item">
+                        <i class="fa fa-cubes" style="font-size:2.5rem; color: var(--accent-color-orange);"></i>
+                        <span>Mikrotjänster</span>
+                    </div>
+                    <div class="skill-item">
+                        <i class="fa fa-database" style="font-size:2.5rem; color: var(--accent-color-orange);"></i>
+                        <span>NoSQL</span>
+                    </div>
+                    <div class="skill-item">
+                        <i class="fa fa-exchange" style="font-size:2.5rem; color: var(--accent-color-orange);"></i>
+                        <span>REST API</span>
+                    </div>
                 </div>
             </div>
         </section>
@@ -149,7 +456,7 @@ Jag drivs av att <strong>lösa problem</strong> och angripa utmaningar från fle
 
                     <div class="project-card">
                         <div class="project-card-image">
-                            <img src="images/projectzoo.png" alt="ZooSAL" loading="lazy">
+                            <img src="images/projekt-zoo.png" alt="ZooSAL" loading="lazy">
                         </div>
                         <div class="project-card-body">
                             <h3 class="project-title">ZooSal</h3>
@@ -157,8 +464,8 @@ Jag drivs av att <strong>lösa problem</strong> och angripa utmaningar från fle
                             <p class="project-desc">ZooSAL är en fiktiv djurparkswebbplats byggd i HTML och CSS som ett grupprojekt. Sidan presenterar parken med sektioner för djur, restauranger, öppettider och karta.</p>
                             <p class="project-desc">Vi jobbade med Git och GitHub, feature-branches och pull requests &mdash; en praktisk introduktion till ett verkligt utvecklingsflöde.</p>
                             <div class="project-tags">
-                                <span class="project-tag">HTML</span>
-                                <span class="project-tag">CSS</span>
+                                <span class="project-tag"><i class="devicon-html5-plain colored"></i> HTML</span>
+                                <span class="project-tag"><i class="devicon-css3-plain colored"></i> CSS</span>
                             </div>
                             <a href="https://github.com/LarsO-bit/ZooSAL" class="project-link">Github repo &rarr;</a>
                         </div>
@@ -166,7 +473,7 @@ Jag drivs av att <strong>lösa problem</strong> och angripa utmaningar från fle
 
                     <div class="project-card">
                         <div class="project-card-image">
-                            <img src="images/swagger.jpg" alt="Projekt 2" loading="lazy">
+                            <img src="images/projekt-bloggportal.jpg" alt="Bloggportal API" loading="lazy">
                         </div>
                         <div class="project-card-body">
                             <h3 class="project-title">Bloggportal</h3>
@@ -174,9 +481,9 @@ Jag drivs av att <strong>lösa problem</strong> och angripa utmaningar från fle
                             <p class="project-desc">REST API byggt i C# med ASP.NET Core för en bloggplattform. Hanterar blogginlägg, kategorier, kommentarer och användare med JWT-autentisering och Entity Framework Core mot SQL Server.</p>
                             <p class="project-desc">Följer skiktad arkitektur med Controllers, Services, Repositories och DTOs &mdash; affärslogik och dataaccess hålls separerade.</p>
                             <div class="project-tags">
-                                <span class="project-tag">C#</span>
-                                <span class="project-tag">.NET</span>
-                                <span class="project-tag">SQL</span>
+                                <span class="project-tag"><i class="devicon-csharp-plain colored"></i> C#</span>
+                                <span class="project-tag"><i class="devicon-dot-net-plain colored"></i> .NET</span>
+                                <span class="project-tag"><i class="devicon-microsoftsqlserver-plain colored"></i> SQL</span>
                             </div>
                             <a href="https://github.com/Sara97amy/.net_web_API" target="_blank" class="project-link">Github repo &rarr;</a>
                         </div>
@@ -184,7 +491,7 @@ Jag drivs av att <strong>lösa problem</strong> och angripa utmaningar från fle
 
                     <div class="project-card">
                         <div class="project-card-image">
-                            <img src="images/shotgun.png" alt="Projekt 3" loading="lazy">
+                            <img src="images/projekt-shotgun.png" alt="Shotgun spel" loading="lazy">
                         </div>
                         <div class="project-card-body">
                             <h3 class="project-title">Shotgun</h3>
@@ -192,7 +499,7 @@ Jag drivs av att <strong>lösa problem</strong> och angripa utmaningar från fle
                             <p class="project-desc">Mitt första C#-projekt &mdash; ett turbaserat konsollspel mot datorn. Spelaren väljer varje runda mellan att ladda, skjuta, hagelgevär eller blockera baserat på ammunitionstillstånd.</p>
                             <p class="project-desc">Strukturerat med separata klasser för spellogik, spelarhantering och action-typer.</p>
                             <div class="project-tags">
-                                <span class="project-tag">C#</span>
+                                <span class="project-tag"><i class="devicon-csharp-plain colored"></i> C#</span>
                             </div>
                             <a href="https://github.com/Sara97amy/inlamning_1_Sara" class="project-link">Github repo &rarr;</a>
                         </div>
@@ -200,7 +507,7 @@ Jag drivs av att <strong>lösa problem</strong> och angripa utmaningar från fle
 
                     <div class="project-card">
                         <div class="project-card-image">
-                            <img src="images/adressbok.png" alt="Adressbok" loading="lazy">
+                            <img src="images/projekt-adressbok.png" alt="Adressbok" loading="lazy">
                         </div>
                         <div class="project-card-body">
                             <h3 class="project-title">Adressbok</h3>
@@ -208,8 +515,8 @@ Jag drivs av att <strong>lösa problem</strong> och angripa utmaningar från fle
                             <p class="project-desc">Konsolbaserad C#-applikation med CRUD-funktionalitet. Kontakter sparas automatiskt till fil via en dedikerad FileManager-klass.</p>
                             <p class="project-desc">Uppdelad i separata klasser för modell, logik och filhantering med ett menybaserat gränssnitt. Grupparbete.</p>
                             <div class="project-tags">
-                                <span class="project-tag">C#</span>
-                                <span class="project-tag">.NET</span>
+                                <span class="project-tag"><i class="devicon-csharp-plain colored"></i> C#</span>
+                                <span class="project-tag"><i class="devicon-dot-net-plain colored"></i> .NET</span>
                             </div>
                             <a href="https://github.com/LarsO-bit/Address-book" target="_blank" class="project-link">Github repo &rarr;</a>
                         </div>
@@ -219,37 +526,49 @@ Jag drivs av att <strong>lösa problem</strong> och angripa utmaningar från fle
             </div>
         </section>
 
-        <section id="skills" class="section-skills">
+        <section id="background" class="section-background">
             <div class="container">
-                <h2>Kunskap</h2>
-                <div class="skills-grid">
-                    <div class="skill-item">
-                        <i class="devicon-csharp-plain colored"></i>
-                        <span>C#</span>
+                <h2>Arbetslivserfarenheter</h2>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <span class="timeline-year">2023</span>
+                        <div class="timeline-content">
+                            <h3>Avdelningschef Hår & Skönhet, Nordiska Kompaniet</h3>
+                            <p>Helhetsansvar för avdelningens resultat, drift och utveckling med personalansvar för 18 medarbetare. Säkerställde hög kvalitet i försäljning och service genom ett coachande och närvarande ledarskap. Arbetade strategiskt och operativt med inköp, resultatuppföljning och analys samt ansvarade för rekrytering, schemaläggning och avtalshantering. Planerade och genomförde marknadsaktiviteter samt projektledde flera event.</p>
+                        </div>
                     </div>
-                    <div class="skill-item">
-                        <i class="devicon-microsoftsqlserver-plain colored"></i>
-                        <span>SQL</span>
+                    <div class="timeline-item">
+                        <span class="timeline-year">2020</span>
+                        <div class="timeline-content">
+                            <h3>Franchisetagare / Butiksägare, Pressbyrån Norra hamngatan</h3>
+                            <p>Etablerade och drev verksamheten med fullt operativt ansvar för bolagets ekonomi, budget, redovisning och uppföljning samt inköp, lager, inventering och personal. Arbetade strategiskt med att utveckla verksamheten genom ökad tillväxt, stärkt lönsamhet och effektivare arbetssätt. Var vid tillträdet koncernens yngsta franchisetagare och utsågs till årets butik i Göteborgsregionen 2022.</p>
+                        </div>
                     </div>
-                    <div class="skill-item">
-                        <i class="devicon-azure-plain colored"></i>
-                        <span>Azure</span>
+                    <div class="timeline-item">
+                        <span class="timeline-year">2016</span>
+                        <div class="timeline-content">
+                            <h3>Butikschef Pressbyrån Göteborg C</h3>
+                            <p>Ansvarade för den dagliga driften inklusive arbetsledning, delegering och utbildning av personal. Hanterade löpande operativa inköp inom flera produktkategorier samt följde upp och rapporterade försäljningsresultat till butiksägaren.</p>
+                        </div>
                     </div>
-                    <div class="skill-item">
-                        <i class="devicon-html5-plain colored"></i>
-                        <span>HTML</span>
+                    <div class="timeline-item">
+                        <span class="timeline-year">2013</span>
+                        <div class="timeline-content">
+                            <h3>Övriga arbetslivserfarenheter</h3>
+                            <p>Tidigare erfarenhet från flera roller inom service, bland annat inom café, restaurang, kiosk och dagligvaruhandel.</p>
+                        </div>
                     </div>
-                    <div class="skill-item">
-                        <i class="devicon-css3-plain colored"></i>
-                        <span>CSS</span>
-                    </div>
-                    <div class="skill-item">
-                        <i class="devicon-dot-net-plain colored"></i>
-                        <span>.NET</span>
-                    </div>
-                    <div class="skill-item skill-item--more">
-                        <span class="skill-more">Mer på<br>väg...</span>
-                    </div>
+                </div>
+
+                <h2>Övrigt &amp; Meriter</h2>
+                <div class="merits-list">
+                    <div class="merit-item"><span class="merit-label">🧾 Kassavana</span><span class="merit-value">Backofficesystem: Tableau, Shopflow, Hicore m.fl.</span></div>
+                    <div class="merit-item"><span class="merit-label">📊 Microsoft Office</span><span class="merit-value">Goda kunskaper i Excel och Word</span></div>
+                    <div class="merit-item"><span class="merit-label">🎨 Adobe</span><span class="merit-value">Grundläggande kunskaper i Photoshop och InDesign</span></div>
+                    <div class="merit-item"><span class="merit-label">🌍 Språk</span><span class="merit-value">Mycket goda kunskaper engelska tal och skrift &mdash; Svenska modersmål</span></div>
+                    <div class="merit-item"><span class="merit-label">🏆 Årets butik 2021</span><span class="merit-value">Pressbyrån Västra Götalandsregionen</span></div>
+                    <div class="merit-item"><span class="merit-label">🥇 Årets UF-Företag 2015</span><span class="merit-value">Jensen Gymnasium</span></div>
+                    <div class="merit-item"><span class="merit-label">🤝 Mjuka värden</span><span class="merit-value">Positiv, nyfiken, social, lösningsorienterad, inkluderande, kommunikativ, värderingsstyrd</span></div>
                 </div>
             </div>
         </section>
@@ -260,11 +579,17 @@ Jag drivs av att <strong>lösa problem</strong> och angripa utmaningar från fle
             <div class="testimonials-grid">
                 <div class="testimonial-card">
                     <p class="testimonial-quote">&ldquo;Sara är en väldigt driftig, snabblärd och resultatinriktad person med en stor social kompetens och förmåga att engagera&rdquo;</p>
-                    <span class="testimonial-author">&mdash; Victoria Hedling, distrikschef, Reitan convenience</span>
+                    <div class="testimonial-author-row">
+                        <img src="images/omdome-victoria.jpg" alt="Victoria Hedling" class="testimonial-avatar">
+                        <span class="testimonial-author">Victoria Hedling<br><span class="testimonial-author-title">Distrikschef, Reitan Convenience</span></span>
+                    </div>
                 </div>
                 <div class="testimonial-card">
                     <p class="testimonial-quote">&ldquo;Att jobba med Sara är en fröjd, hon är snabb, lösningsorienterad och hennes breda erfarenhet gör det lätt att sammarbeta i olika projekt. Rekomenderar varmt!&rdquo;</p>
-                    <span class="testimonial-author">&mdash; Sofia Eriksson, Education & Business Development Expert, Henkel Norden AB</span>
+                    <div class="testimonial-author-row">
+                        <img src="images/omdome-sofia.jpg" alt="Sofia Eriksson" class="testimonial-avatar">
+                        <span class="testimonial-author">Sofia Eriksson<br><span class="testimonial-author-title">Education & Business Development Expert, Henkel Norden AB</span></span>
+                    </div>
                 </div>
                 <!--<div class="testimonial-card">
                     <p class="testimonial-quote">&ldquo;Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum&rdquo;</p>
@@ -303,10 +628,13 @@ Jag drivs av att <strong>lösa problem</strong> och angripa utmaningar från fle
 
     </main>
 
+    <a href="#hero" class="back-to-top" aria-label="Tillbaka till toppen">↑</a>
+
     <footer>
         <div class="container">
             <div class="footer-content">
                 <p class="footer-copy">&copy; 2026 Sara Lindh</p>
+                <div id="weather-data"></div>
                 <div class="footer-social">
                     <a href="https://github.com/Sara97amy" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="devicon-github-original"></i></a>
                     <a href="https://www.linkedin.com/in/sara-lindh-13727b21a/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="devicon-linkedin-plain"></i></a>

@@ -12,13 +12,6 @@ footer {
     gap: var(--spacing-large);
 }
 
-@media (max-width: 768px) {
-    .footer-content {
-        flex-direction: column;
-        text-align: center;
-    }
-}
-
 .footer-copy {
     font-size: 1rem;
     opacity: 0.6;
@@ -38,12 +31,42 @@ footer {
 }
 
 .footer-social a:hover {
-    opacity: 0.7;
+    opacity: 0.85;
 }
 
 footer .container {
     padding-top: var(--spacing-small);
     padding-bottom: var(--spacing-small);
+}
+
+
+
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+        gap: var(--spacing-medium);
+    }
+
+    .footer-social {
+        gap: var(--spacing-large);
+        justify-content: center;
+    }
+
+    .footer-social a {
+        /* Ensure 44px tap target */
+        min-width: 44px;
+        min-height: 44px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer-copy {
+        font-size: 0.85rem;
+    }
 }
 
 
