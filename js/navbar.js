@@ -34,3 +34,11 @@ function updateActiveLink() {
 
 window.addEventListener('scroll', updateActiveLink, { passive: true });
 updateActiveLink();
+
+
+// Flytande tillbaka-till-toppen-knapp
+const backToTop = document.querySelector('.back-to-top');
+
+window.addEventListener('scroll', () => {
+    backToTop.classList.toggle('visible', window.pageYOffset > 400);
+}, { passive: true });
