@@ -72,8 +72,8 @@ header {
     justify-content: center;
     gap: 5px;
     margin-left: auto;
-    background: none;
-    border: 2px solid var(--accent-color-orange);
+    background-color: var(--accent-color-orange);
+    border: none;
     border-radius: var(--border-radius);
     cursor: pointer;
     padding: 8px 10px;
@@ -84,7 +84,7 @@ header {
 .hamburger span {
     display: block;
     height: 2px;
-    background-color: var(--accent-color-orange);
+    background-color: white;
     border-radius: 2px;
     transition: transform 0.25s ease, opacity 0.2s ease, width 0.2s ease;
 }
