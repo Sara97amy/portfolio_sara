@@ -1,0 +1,462 @@
+/* ── Utbildningssektionen ──────────────────────────── */
+
+.section-education {
+    background-color: var(--background-color-2);
+}
+
+/* Utbildningskortet (Jensen YH) */
+
+.edu-card {
+    background-color: var(--color-card);
+    border-radius: var(--border-radius-card);
+    box-shadow: var(--shadow-card);
+    overflow: hidden;
+}
+
+.edu-card-header {
+    padding: var(--spacing-large);
+}
+
+.edu-card-header-top {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: var(--spacing-large);
+}
+
+.edu-card-header-text {
+    flex: 1;
+    min-width: 0;
+}
+
+.edu-school-logo {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    flex-shrink: 0;
+    opacity: 0.85;
+}
+
+.edu-card-divider {
+    height: 1px;
+    background-color: rgba(0, 0, 0, 0.07);
+    margin: 0;
+}
+
+.edu-card-header h2 {
+    margin-top: 0;
+    margin-bottom: 4px;
+    text-align: left;
+}
+
+.edu-badge {
+    display: inline-block;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--accent-color-orange);
+    border: 1.5px solid var(--accent-color-orange);
+    border-radius: 99px;
+    padding: 3px 12px;
+    margin-bottom: 12px;
+}
+
+.edu-school {
+    font-size: 0.95rem;
+    opacity: 0.7;
+    margin: 0 0 12px;
+}
+
+.edu-intro {
+    font-size: 0.9rem;
+    line-height: 1.7;
+    opacity: 0.85;
+    margin: 0 0 16px;
+}
+
+.edu-card-footer {
+    padding: var(--spacing-medium) var(--spacing-large);
+    border-top: 1px solid rgba(0, 0, 0, 0.07);
+}
+
+.education-tag-download {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-family: 'Atkinson Hyperlegible Mono', monospace;
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: var(--accent-color-orange);
+    text-decoration: none;
+    opacity: 0.75;
+    transition: opacity 0.2s ease;
+}
+
+.education-tag-download:hover {
+    opacity: 1;
+}
+
+/* Kurslista med expanderbara rader */
+
+.course-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.course-row {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.course-row:last-child {
+    border-bottom: none;
+}
+
+.course-row-summary {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 11px var(--spacing-large);
+    cursor: pointer;
+    list-style: none;
+    user-select: none;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--color-text);
+    transition: background-color 0.15s;
+}
+
+.course-row-summary::-webkit-details-marker {
+    display: none;
+}
+
+.course-row-summary:hover {
+    background-color: transparent;
+}
+
+.course-row-summary .fa-chevron-down {
+    font-size: 0.75rem;
+    color: var(--accent-color-orange);
+    flex-shrink: 0;
+    transition: transform 0.2s ease;
+}
+
+details.course-row[open] {
+    background-color: rgba(248, 120, 40, 0.06);
+}
+
+details.course-row[open] > .course-row-summary {
+    color: var(--accent-color-orange);
+}
+
+details.course-row[open] > .course-row-summary .fa-chevron-down {
+    transform: rotate(180deg);
+}
+
+.course-row-body {
+    padding: 4px var(--spacing-large) 14px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.course-row-body p {
+    font-size: 0.78rem;
+    color: var(--color-text-muted);
+    line-height: 1.65;
+    margin: 0;
+}
+
+.course-chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+.course-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 0.68rem;
+    font-weight: 600;
+    background-color: var(--background-color-1);
+    border: 1px solid rgba(0, 0, 0, 0.07);
+    border-radius: 5px;
+    padding: 3px 8px;
+    color: var(--color-text);
+}
+
+.course-chip i {
+    font-size: 0.9rem;
+}
+
+/* Övriga utbildningar (expanderbar sektion under kortet) */
+
+.edu-other-toggle {
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    border-radius: var(--border-radius-card);
+    background-color: var(--color-card);
+    overflow: hidden;
+}
+
+.edu-other-summary {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px var(--spacing-large);
+    cursor: pointer;
+    list-style: none;
+    user-select: none;
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: var(--color-text-muted);
+    transition: background-color 0.15s;
+}
+
+.edu-other-summary::-webkit-details-marker {
+    display: none;
+}
+
+.edu-other-summary:hover {
+    background-color: rgba(0, 0, 0, 0.02);
+}
+
+.edu-other-summary .fa-chevron-down {
+    font-size: 0.65rem;
+    color: var(--color-text-muted);
+    opacity: 0.5;
+    transition: transform 0.2s ease;
+}
+
+details.edu-other-toggle[open] > .edu-other-summary .fa-chevron-down {
+    transform: rotate(180deg);
+}
+
+.edu-other-body {
+    border-top: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+/* Accordion-rader inuti "Övriga utbildningar" */
+
+.edu-accordion {
+    display: flex;
+    flex-direction: column;
+}
+
+.accordion-item {
+    border-bottom: 1px solid var(--background-color-2);
+}
+
+.accordion-item:first-child {
+    border-top: none;
+}
+
+.accordion-summary {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 4px;
+    cursor: pointer;
+    list-style: none;
+    user-select: none;
+}
+
+.accordion-summary::-webkit-details-marker {
+    display: none;
+}
+
+.accordion-title {
+    font-size: 0.85rem;
+    font-weight: 700;
+    flex: 1;
+}
+
+.accordion-chevron {
+    font-size: 1.2rem;
+    color: var(--accent-color-orange);
+    transition: transform 0.2s ease;
+    line-height: 1;
+}
+
+details[open] .accordion-chevron {
+    transform: rotate(90deg);
+}
+
+.accordion-body {
+    padding: 0 4px 14px;
+}
+
+.accordion-body p {
+    font-size: 0.82rem;
+    opacity: 0.7;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.accordion-sub-item {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    padding: 8px 0;
+    border-bottom: 1px solid var(--background-color-2);
+}
+
+.accordion-sub-item:last-child {
+    border-bottom: none;
+}
+
+.accordion-sub-title {
+    font-size: 0.82rem;
+    font-weight: 600;
+}
+
+.accordion-sub-meta {
+    font-size: 0.76rem;
+    color: var(--accent-color-orange);
+    opacity: 0.85;
+}
+
+.edu-other-body .accordion-item {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+    border-top: none;
+}
+
+.edu-other-body .accordion-item:first-child {
+    border-top: none;
+}
+
+.edu-other-body .accordion-summary {
+    padding: 11px var(--spacing-large);
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--color-text);
+}
+
+.edu-other-body .accordion-chevron {
+    font-size: 0.9rem;
+    color: var(--color-text-muted);
+    opacity: 0.4;
+}
+
+.edu-other-body details[open] > .accordion-summary {
+    color: var(--color-text);
+}
+
+.edu-other-body details[open] .accordion-chevron {
+    transform: rotate(90deg);
+    opacity: 0.6;
+}
+
+.edu-other-body .accordion-body {
+    padding: 2px var(--spacing-large) 14px;
+}
+
+.edu-other-body .accordion-sub-item {
+    padding: 7px 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.edu-other-body .accordion-sub-meta {
+    font-size: 0.78rem;
+    font-weight: 700;
+    color: var(--color-text-muted);
+    opacity: 0.6;
+    margin-bottom: 2px;
+}
+
+.edu-other-body .accordion-sub-title {
+    font-size: 0.78rem;
+    font-weight: 400;
+    color: var(--color-text);
+    opacity: 0.85;
+}
+
+@media (max-width: 768px) {
+    .edu-card {
+        border-radius: var(--border-radius);
+    }
+
+    .edu-other-toggle {
+        border-radius: var(--border-radius);
+    }
+
+    .edu-card-header {
+        padding: var(--spacing-large) var(--spacing-medium) var(--spacing-medium);
+    }
+
+    .edu-card-header-top {
+        align-items: flex-start;
+        gap: var(--spacing-medium);
+    }
+
+    .edu-school-logo {
+        width: 48px;
+        height: 48px;
+    }
+
+    .course-row-summary {
+        padding: 12px var(--spacing-medium);
+        min-height: 44px;
+    }
+
+    .course-row-body {
+        padding: 4px var(--spacing-medium) 14px;
+    }
+
+    .edu-card-footer {
+        padding: var(--spacing-medium);
+    }
+
+    .edu-other-summary {
+        padding: 14px var(--spacing-medium);
+        min-height: 44px;
+    }
+
+    .edu-other-body .accordion-summary {
+        padding: 12px var(--spacing-medium);
+        min-height: 44px;
+    }
+
+    .edu-other-body .accordion-body {
+        padding: 2px var(--spacing-medium) 14px;
+    }
+
+    .accordion-summary {
+        min-height: 44px;
+        padding: 12px var(--spacing-medium);
+    }
+
+    .accordion-body {
+        padding: 0 var(--spacing-medium) 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .edu-card-header {
+        padding: var(--spacing-large) var(--spacing-medium) var(--spacing-medium);
+    }
+
+    .course-row-summary {
+        padding: 12px var(--spacing-small);
+        font-size: 0.75rem;
+    }
+
+    .edu-other-summary {
+        padding: 12px var(--spacing-medium);
+        font-size: 0.75rem;
+    }
+
+    .edu-other-body .accordion-summary {
+        padding: 12px var(--spacing-medium);
+    }
+
+    .course-chips {
+        gap: 4px;
+    }
+
+    .course-chip {
+        font-size: 0.65rem;
+        padding: 3px 6px;
+    }
+}

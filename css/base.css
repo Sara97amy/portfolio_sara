@@ -40,6 +40,10 @@ body {
     color: var(--color-text);
 }
 
+main {
+    overflow-x: hidden;
+}
+
 
 img {
     max-width: 100%;
@@ -102,7 +106,7 @@ p {
 
     section .container,
     footer .container {
-        padding: var(--spacing-section) 32px;
+        padding: var(--spacing-section) 20px;
     }
 }
 
@@ -117,6 +121,6 @@ p {
 
     section .container,
     footer .container {
-        padding: var(--spacing-section) 24px;
+        padding: var(--spacing-section) 16px;
     }
 }

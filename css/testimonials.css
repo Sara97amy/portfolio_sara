@@ -15,9 +15,15 @@
     gap: var(--spacing-medium);
     padding: var(--spacing-large);
     border-radius: var(--border-radius-card);
-    background-color: #fff;
-    box-shadow: var(--card-shadow);
+    background-color: var(--color-card);
+    box-shadow: var(--shadow-card);
     position: relative;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.testimonial-card:hover {
+    transform: scale(1.03);
+    box-shadow: 0 8px 32px rgba(248, 120, 40, 0.18);
 }
 
 .testimonial-card::before {
@@ -32,26 +38,80 @@
 }
 
 .testimonial-quote {
-    font-size: 1rem;
+    font-size: 0.95rem;
     line-height: 1.7;
     text-align: left;
     padding-top: 2rem;
 }
 
-.testimonial-author {
+.testimonial-author-row {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-medium);
     margin-top: auto;
-    text-align: left;
+    padding-top: var(--spacing-small);
+    border-top: 1px solid var(--background-color-2);
+}
+
+.testimonial-avatar {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;
+    background-color: white;
+    box-shadow: 0 0 0 2px white, 0 0 0 3px rgba(0,0,0,0.08);
+}
+
+.testimonial-author {
     font-size: 0.8rem;
-    font-weight: 600;
+    font-weight: 700;
     color: var(--accent-color-orange);
     text-transform: uppercase;
     letter-spacing: 0.05em;
-    padding-top: var(--spacing-small);
-    border-top: 1px solid var(--background-color-2);
+    line-height: 1.4;
+}
+
+.testimonial-author-title {
+    font-size: 0.72rem;
+    font-weight: 400;
+    color: var(--color-text-muted);
+    text-transform: none;
+    letter-spacing: 0;
 }
 
 @media (max-width: 768px) {
     .testimonials-grid {
         grid-template-columns: 1fr;
+        gap: var(--spacing-medium);
+    }
+
+    .testimonial-card {
+        padding: var(--spacing-medium);
+    }
+
+    /* Disable scale hover on touch */
+    .testimonial-card:hover {
+        transform: none;
+        box-shadow: var(--shadow-card);
+    }
+}
+
+@media (max-width: 480px) {
+    .testimonial-quote {
+        font-size: 0.88rem;
+    }
+
+    .testimonial-avatar {
+        width: 48px;
+        height: 48px;
+    }
+
+    .testimonial-author {
+        font-size: 0.75rem;
+    }
+
+    .testimonial-author-title {
+        font-size: 0.68rem;
     }
 }
