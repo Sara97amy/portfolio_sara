@@ -80,6 +80,28 @@
     border-top: 1px solid var(--background-color-2);
 }
 
+.cv-download-btn {
+    display: inline-flex;
+    align-self: flex-start;
+    align-items: center;
+    gap: 8px;
+    margin-top: var(--spacing-medium);
+    padding: 10px 20px;
+    border: 1.5px solid var(--accent-color-orange);
+    border-radius: var(--border-radius);
+    font-family: 'Atkinson Hyperlegible Mono', monospace;
+    font-size: 0.82rem;
+    font-weight: 700;
+    color: var(--accent-color-orange);
+    text-decoration: none;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.cv-download-btn:hover {
+    background-color: var(--accent-color-orange);
+    color: white;
+}
+
 .merit-label {
     font-size: 0.8rem;
     font-weight: 700;
