@@ -1,22 +1,22 @@
 # Portfolio – Sara Lindh
 
-
 Personlig portfoliosida byggd med HTML, CSS och JavaScript. Sidan presenterar mig, mina projekt, min tekniska kompetens och mina kontaktuppgifter.
 
-## Innehåll
+## Sektioner
 
-- **Om mig** – bakgrund, arbetslivserfarenhet, utbildning och meriter
-- **Projekt** – urval av kodprojekt med beskrivningar och GitHub-länkar
-- **Kunskap** – teknisk kompetens
-- **Omdömen** – referenser
+- **Om mig** – kort presentation
+- **Utbildning** – Jensen YH med expanderbara kurser, övriga utbildningar
+- **Nuvarande & kommande kompetenser** – tech stack med ikoner
+- **Projekt** – kodprojekt med beskrivningar och GitHub-länkar
+- **Arbetslivserfarenheter** – tidslinje + meriter
+- **Omdömen** – referenser med avatarbilder
 - **Kontakt** – formulär kopplat till Web3Forms
 
 ## Tekniker
 
-- HTML5
-- CSS3 (CSS Grid, Flexbox, Custom Properties, animationer)
-- JavaScript (Fetch API, parallax, mobil-navigation)
-- [Web3Forms](https://web3forms.com/) för formulärhantering
+- HTML5, CSS3, JavaScript (vanilla – inget ramverk)
+- CSS Grid, Flexbox och Custom Properties för layout och teman
+- Fetch API för väderdata (OpenWeatherMap) och formulärinlämning (Web3Forms)
 
 ## Mappstruktur
 
@@ -24,31 +24,43 @@ Personlig portfoliosida byggd med HTML, CSS och JavaScript. Sidan presenterar mi
 portfolio_sara/
 ├── index.html
 ├── css/
-│   ├── base.css
-│   ├── navbar.css
-│   ├── hero.css
-│   ├── about.css
-│   ├── projects.css
-│   ├── skills.css
-│   ├── testimonials.css
-│   ├── contact.css
-│   └── footer.css
+│   ├── base.css          – globala variabler, typografi, container
+│   ├── navbar.css        – navigation och hamburger-meny
+│   ├── hero.css          – hero-sektionen
+│   ├── about.css         – om mig-sektionen
+│   ├── education.css     – utbildningssektionen (kort, kurser, accordion)
+│   ├── experience.css    – arbetslivserfarenhet (tidslinje, meriter)
+│   ├── skills.css        – kompetenser-grid
+│   ├── projects.css      – projektkort
+│   ├── testimonials.css  – omdömen
+│   ├── contact.css       – kontaktformulär
+│   └── footer.css        – sidfot
 ├── js/
-│   ├── nav.js
-│   ├── parallax.js
-│   └── contact.js
+│   ├── navbar.js         – hamburger-meny, aktiv länk, tillbaka-till-toppen
+│   ├── contact.js        – formulärinlämning via Web3Forms
+│   └── weather.js        – vädervisning i sidfoten (OpenWeatherMap)
 ├── images/
+│   ├── profil.jpg
+│   ├── skola-jensen.png
+│   ├── projekt-zoo.png
+│   ├── projekt-bloggportal.jpg
+│   ├── projekt-shotgun.png
+│   ├── projekt-adressbok.png
+│   ├── omdome-sofia.jpg
+│   └── omdome-victoria.jpg
 └── docs/
+    ├── kursöversikt.pdf
+    └── javascript-manual.html
 ```
 
 ## Funktioner
 
-- Responsiv design med stöd för mobil, surfplatta och desktop
-- Animerad hero-sektion med parallax-effekt vid scrollning
-- Hamburger-meny för mobil med tillgänglighetsattribut
-- Aktiv navigeringslänk uppdateras vid scrollning
-- Kontaktformulär med asynkron inlämning och felhantering
-- Stöd för `prefers-reduced-motion` – animationer stängs av för användare som föredrar det
+- Responsiv design för mobil, surfplatta och desktop
+- Hamburger-meny med tillgänglighetsattribut (aria-expanded)
+- Aktiv navigationslänk uppdateras automatiskt vid scrollning
+- Flytande tillbaka-till-toppen-knapp (dyker upp efter 400px scroll)
+- Expanderbara kurser och utbildningar med `<details>`/`<summary>`
+- Kontaktformulär med asynkron inlämning, svenska felmeddelanden och bakåtknapp-reset
+- Vädervisning i sidfoten som uppdateras var 60:e sekund
 - Lazy loading på projektbilder
-
-//S
+- Stöd för `prefers-reduced-motion`
