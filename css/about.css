@@ -4,16 +4,6 @@
     background-color: var(--background-color-1);
 }
 
-.about-content {
-    display: flex;
-    align-items: flex-start;
-    gap: var(--spacing-large);
-}
-
-.about-text {
-    flex: 4;
-}
-
 .about-text p + p {
     margin-top: var(--spacing-medium);
 }
@@ -23,13 +13,6 @@
     font-size: 0.95rem;
     font-weight: 400;
     color: var(--color-text);
-    opacity: 1;
     margin-top: var(--spacing-large) !important;
     line-height: 1.6;
-}
-
-@media (max-width: 768px) {
-    .about-content {
-        flex-direction: column;
-    }
 }
