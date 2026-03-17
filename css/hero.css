@@ -77,14 +77,6 @@
     transition: background-color 0.2s ease, border-color 0.2s ease;
 }
 
-.hero-lia-btn::before {
-    content: '';
-    width: 7px;
-    height: 7px;
-    border-radius: 50%;
-    background-color: #6effa0;
-    flex-shrink: 0;
-}
 
 .hero-lia-arrow {
     font-size: 1.05rem;
