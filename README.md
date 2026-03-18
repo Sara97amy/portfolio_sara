@@ -47,10 +47,11 @@ portfolio_sara/
 │   ├── projekt-shotgun.png
 │   ├── projekt-adressbok.png
 │   ├── omdome-sofia.jpg
-│   └── omdome-victoria.jpg
+│   ├── omdome-victoria.jpg
+│   └── omdome-rebecca.png
 └── docs/
-    ├── kursöversikt.pdf
-    └── javascript-manual.html
+    ├── cv.pdf
+    └── kursöversikt.pdf
 ```
 
 ## Funktioner
