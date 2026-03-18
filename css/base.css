@@ -90,8 +90,6 @@ p {
 }
 
 
-/* ── Flytande tillbaka-till-toppen-knapp ───────────── */
-
 .back-to-top {
     position: fixed;
     bottom: 28px;

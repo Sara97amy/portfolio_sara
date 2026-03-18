@@ -95,7 +95,6 @@
         padding: var(--spacing-medium);
     }
 
-    /* Disable scale hover on touch */
     .testimonial-card:hover {
         transform: none;
         box-shadow: var(--shadow-card);

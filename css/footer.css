@@ -54,7 +54,6 @@ footer .container {
     }
 
     .footer-social a {
-        /* Ensure 44px tap target */
         min-width: 44px;
         min-height: 44px;
         display: inline-flex;

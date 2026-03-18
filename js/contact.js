@@ -76,7 +76,6 @@ form.addEventListener('submit', async (e) => {
     }
 });
 
-// Återställ formuläret om användaren går tillbaka med webbläsarens bakåtknapp
 window.addEventListener('pageshow', (e) => {
     if (e.persisted) form.reset();
 });

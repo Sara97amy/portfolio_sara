@@ -1,10 +1,6 @@
-/* ── Utbildningssektionen ──────────────────────────── */
-
 .section-education {
     background-color: var(--background-color-2);
 }
-
-/* Utbildningskortet (Jensen YH) */
 
 .edu-card {
     background-color: var(--color-card);
@@ -96,8 +92,6 @@
 .education-tag-download:hover {
     opacity: 1;
 }
-
-/* Kurslista med expanderbara rader */
 
 .course-list {
     display: flex;
@@ -191,8 +185,6 @@ details.course-row[open] > .course-row-summary .fa-chevron-down {
     font-size: 0.9rem;
 }
 
-/* Övriga utbildningar (expanderbar sektion under kortet) */
-
 .edu-other-toggle {
     border: 1px solid rgba(0, 0, 0, 0.08);
     border-radius: var(--border-radius-card);
@@ -236,8 +228,6 @@ details.edu-other-toggle[open] > .edu-other-summary .fa-chevron-down {
 .edu-other-body {
     border-top: 1px solid rgba(0, 0, 0, 0.06);
 }
-
-/* Accordion-rader inuti "Övriga utbildningar" */
 
 .edu-accordion {
     display: flex;

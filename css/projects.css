@@ -133,7 +133,6 @@
         padding: var(--spacing-medium);
     }
 
-    /* Disable scale hover on touch — avoids layout jumps */
     .project-card:hover {
         transform: none;
         box-shadow: var(--shadow-card);

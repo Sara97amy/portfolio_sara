@@ -1,5 +1,3 @@
-/* ── Arbetslivserfarenhet-sektionen ────────────────── */
-
 .section-background {
     background-color: var(--background-color-1);
 }
@@ -7,8 +5,6 @@
 .section-background h2:not(:first-child) {
     margin-top: var(--spacing-section);
 }
-
-/* Tidslinje för arbetslivserfarenheter */
 
 .timeline {
     position: relative;
@@ -64,8 +60,6 @@
     padding-top: 2px;
 }
 
-/* Meriter och övrigt */
-
 .merits-list {}
 
 .merit-item {
@@ -115,7 +109,6 @@
 }
 
 @media (max-width: 768px) {
-    /* Tidslinje på mobil: kortlayout utan sidolinje */
     .timeline {
         padding-left: 0;
         overflow: visible;

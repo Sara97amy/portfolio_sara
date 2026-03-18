@@ -99,7 +99,7 @@
 
     .form-field input,
     .form-field textarea {
-        font-size: 1rem; /* prevents iOS zoom on focus */
+        font-size: 1rem;
         padding: 14px 16px;
         min-height: 48px;
     }
