@@ -54,6 +54,22 @@
     border-color: var(--accent-color-orange);
 }
 
+.form-error {
+    display: none;
+    font-size: 0.75rem;
+    color: #d93025;
+    font-weight: 600;
+}
+
+.form-error.visible {
+    display: block;
+}
+
+.form-field input.invalid,
+.form-field textarea.invalid {
+    border-color: #d93025;
+}
+
 .form-submit {
     align-self: flex-start;
     background-color: var(--accent-color-orange);

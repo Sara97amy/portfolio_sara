@@ -610,14 +610,17 @@
                         <div class="form-field">
                             <label for="name">Namn</label>
                             <input type="text" id="name" name="name" placeholder="Ditt namn" required>
+                            <span class="form-error" id="name-error">Vänligen fyll i ditt namn.</span>
                         </div>
                         <div class="form-field">
                             <label for="email">E-post</label>
                             <input type="email" id="email" name="email" placeholder="din@epost.se" required>
+                            <span class="form-error" id="email-error">Vänligen ange en giltig e-postadress.</span>
                         </div>
                         <div class="form-field">
                             <label for="message">Meddelande</label>
                             <textarea id="message" name="message" placeholder="Skriv ditt meddelande..." required></textarea>
+                            <span class="form-error" id="message-error">Vänligen skriv ett meddelande.</span>
                         </div>
                         <button type="submit" class="form-submit">Skicka &rarr;</button>
                     </form>
