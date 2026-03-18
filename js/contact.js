@@ -4,6 +4,12 @@ const submitBtn = form.querySelector('button[type="submit"]');
 form.addEventListener('submit', async (e) => {
     e.preventDefault();
 
+    const email = form.querySelector('#email').value;
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+        alert("Ange en giltig e-postadress.");
+        return;
+    }
+
     const formData = new FormData(form);
     formData.append("access_key", "dffd6df5-7312-4038-9ca7-b24ef6349f93");
 
