@@ -2,24 +2,56 @@
     background-color: var(--background-color-1);
 }
 
+.skills-columns {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-large);
+}
+
+.skills-group-title {
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--accent-color-orange);
+    margin-bottom: var(--spacing-small);
+    text-align: left;
+}
+
 .skills-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(7, 1fr);
     gap: var(--spacing-medium);
-    grid-auto-rows: 1fr;
 }
 
 .skill-item {
     min-width: 0;
+    aspect-ratio: 1;
     background-color: var(--color-card);
-    border-radius: var(--border-radius-card);
-    padding: var(--spacing-large);
+    border-radius: var(--border-radius);
+    padding: var(--spacing-small);
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     gap: var(--spacing-small);
     box-shadow: var(--shadow-card);
     transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.skill-item--more {
+    background-color: transparent;
+    box-shadow: none;
+    border: 1.5px dashed rgba(0, 0, 0, 0.15);
+    color: var(--color-text-muted);
+    font-size: 0.6rem;
+    font-style: italic;
+    opacity: 0.6;
+}
+
+.skill-item--more:hover {
+    transform: none;
+    box-shadow: none;
 }
 
 .skill-item:hover {
@@ -28,52 +60,37 @@
 }
 
 .skill-item i {
-    font-size: 2.5rem;
+    font-size: 2rem;
 }
 
 .skill-item span {
-    font-size: 1rem;
+    font-size: 0.55rem;
     font-weight: 600;
     color: var(--color-text-muted);
     text-transform: uppercase;
-    letter-spacing: 0.05em;
+    letter-spacing: 0.03em;
+    text-align: center;
+    white-space: nowrap;
 }
 
 @media (max-width: 768px) {
     .skills-grid {
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(4, 1fr);
         gap: var(--spacing-small);
-    }
-
-    .skill-item {
-        padding: var(--spacing-medium);
-    }
-
-    .skill-item i {
-        font-size: 2rem;
-    }
-
-    .skill-item span {
-        font-size: 0.75rem;
     }
 }
 
 @media (max-width: 480px) {
     .skills-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 10px;
-    }
-
-    .skill-item {
-        padding: var(--spacing-medium) var(--spacing-small);
-        min-height: 80px;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 8px;
     }
 
     .skill-item i {
-        font-size: 1.8rem;
+        font-size: 1.4rem;
     }
 
     .skill-item span {
-        font-size: 0.7rem;
+        font-size: 0.55rem;
     }
 }
