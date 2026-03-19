@@ -60,18 +60,25 @@
     padding-top: 2px;
 }
 
-.merits-list {}
-
-.merit-item {
-    display: grid;
-    grid-template-columns: 260px 1fr;
-    gap: 0 var(--spacing-medium);
-    padding: 10px 0;
-    border-bottom: 1px solid var(--background-color-2);
+.merits-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-small);
+    margin-top: var(--spacing-medium);
 }
 
-.merit-item:first-child {
-    border-top: 1px solid var(--background-color-2);
+.merit-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 4px 10px;
+    background-color: var(--background-color-2);
+    border-radius: 99px;
+    font-size: 0.75rem;
+}
+
+.merit-short {
+    display: none;
 }
 
 .cv-download-btn {
@@ -148,9 +155,17 @@
     }
 
     .merit-item {
-        grid-template-columns: 1fr;
-        gap: 2px 0;
-        padding: 12px 0;
+        font-size: 0.75rem;
+        padding: 5px 12px;
+    }
+
+    .merit-long { display: none; }
+    .merit-short { display: inline; }
+
+    .cv-download-btn {
+        align-self: stretch;
+        justify-content: center;
+        width: 100%;
     }
 }
 
