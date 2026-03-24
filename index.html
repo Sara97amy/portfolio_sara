@@ -27,6 +27,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon/devicon.min.css">
 
     <script src="js/navbar.js" defer></script>
+    <script src="js/testimonials.js" defer></script>
     <script src="js/contact.js" defer></script>
     <script src="js/weather.js" defer></script>
 </head>
@@ -62,7 +63,7 @@
                         <h1 class="hero-name">Sara Lindh</h1>
                         <p class="hero-tagline">Med en bakgrund inom ledarskap och affärsutveckling drivs jag av att lösa problem från flera perspektiv — tekniskt, mänskligt och affärsmässigt.</p>
                         <div class="hero-bottom">
-                            <a href="#contact" class="hero-lia-btn">Söker LIA hösten 2026 &ndash; Göteborg eller remote 🌍 <span class="hero-lia-arrow">&#10132;</span></a>
+                            <a href="#contact" class="hero-lia-btn">Söker LIA hösten 2026 <span class="hero-lia-arrow">&#10132;</span></a>
                         </div>
                     </div>
                     <div class="hero-image">
@@ -568,39 +569,52 @@
                     <div class="merit-item"><span class="merit-label">🥇 Årets UF-Företag 2015</span><span class="merit-value"><span class="merit-long">Jensen Gymnasium</span><span class="merit-short">Jensen Gymnasium</span></span></div>
                     <div class="merit-item"><span class="merit-label">🤝 Mjuka värden</span><span class="merit-value"><span class="merit-long">Positiv, nyfiken, social, lösningsorienterad, kommunikativ</span><span class="merit-short">Positiv & social</span></span></div>
                 </div>
-                <a href="docs/cv.pdf" download class="cv-download-btn"><i class="fa fa-download"></i> Nyfiken? Ladda ner mitt CV.</a>
+                <p class="experience-cta">Vill du veta mer? <a href="#contact">Ta kontakt!</a></p>
             </div>
         </section>
 
         <section id="testimonials" class="section-testimonials">
-        <div class="container">
-            <h2>Omdömen</h2>
-            <div class="testimonials-grid">
-                <div class="testimonial-card">
-                    <p class="testimonial-quote">&ldquo;Sara är en väldigt driftig, snabblärd och resultatinriktad person med en stor social kompetens och förmåga att engagera&rdquo;</p>
-                    <div class="testimonial-author-row">
-                        <img src="images/omdome-victoria.jpg" alt="Victoria Hedling" class="testimonial-avatar">
-                        <span class="testimonial-author">Victoria Hedling<br><span class="testimonial-author-title">Distrikschef, Reitan Convenience</span></span>
+            <div class="container">
+                <h2>Omdömen</h2>
+                <div class="testimonials-carousel">
+                    <button class="carousel-btn carousel-btn--prev" aria-label="Föregående"><i class="fa fa-chevron-left"></i></button>
+                    <div class="carousel-track-wrapper">
+                        <div class="carousel-track">
+                            <div class="testimonial-slide">
+                                <div class="testimonial-card">
+                                    <p class="testimonial-quote">&ldquo;Sara är en väldigt driftig, snabblärd och resultatinriktad person med en stor social kompetens och förmåga att engagera&rdquo;</p>
+                                    <div class="testimonial-author-row">
+                                        <span class="testimonial-author">Victoria Hedling<br><span class="testimonial-author-title">Distrikschef, Reitan Convenience</span></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="testimonial-slide">
+                                <div class="testimonial-card">
+                                    <p class="testimonial-quote">&ldquo;Att jobba med Sara är en fröjd, hon är snabb, lösningsorienterad och hennes breda erfarenhet gör det lätt att sammarbeta i olika projekt. Rekomenderar varmt!&rdquo;</p>
+                                    <div class="testimonial-author-row">
+                                        <span class="testimonial-author">Sofia Eriksson<br><span class="testimonial-author-title">Education & Business Development Expert, Henkel Norden AB</span></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="testimonial-slide">
+                                <div class="testimonial-card">
+                                    <p class="testimonial-quote">&ldquo;Jag arbetade hos Sara i totalt tre år och trivdes verkligen med henne som chef. Hennes ledarskap skulle jag beskriva som strukturerat men öppet, jag kunde alltid vara trygg med att det fanns riktlinjer, samtidigt som jag var fri att sköta mitt arbete på det sätt som fungerade bäst för mig. Hon har alltid varit rak och tydlig men också öppen och vänlig, samt mycket mån om sina anställda.&rdquo;</p>
+                                    <div class="testimonial-author-row">
+                                        <span class="testimonial-author">Rebecca<br><span class="testimonial-author-title">Medarbetare, Pressbyrån Norra Hamngatan</span></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
+                    <button class="carousel-btn carousel-btn--next" aria-label="Nästa"><i class="fa fa-chevron-right"></i></button>
                 </div>
-                <div class="testimonial-card">
-                    <p class="testimonial-quote">&ldquo;Att jobba med Sara är en fröjd, hon är snabb, lösningsorienterad och hennes breda erfarenhet gör det lätt att sammarbeta i olika projekt. Rekomenderar varmt!&rdquo;</p>
-                    <div class="testimonial-author-row">
-                        <img src="images/omdome-sofia.jpg" alt="Sofia Eriksson" class="testimonial-avatar">
-                        <span class="testimonial-author">Sofia Eriksson<br><span class="testimonial-author-title">Education & Business Development Expert, Henkel Norden AB</span></span>
-                    </div>
+                <div class="carousel-dots">
+                    <button class="carousel-dot active" aria-label="Omdöme 1"></button>
+                    <button class="carousel-dot" aria-label="Omdöme 2"></button>
+                    <button class="carousel-dot" aria-label="Omdöme 3"></button>
                 </div>
-                <div class="testimonial-card testimonial-card--full">
-                    <p class="testimonial-quote">&ldquo;Jag arbetade hos Sara i totalt tre år och trivdes verkligen med henne som chef. Hennes ledarskap skulle jag beskriva som strukturerat men öppet, jag kunde alltid vara trygg med att det fanns riktlinjer, samtidigt som jag var fri att sköta mitt arbete på det sätt som fungerade bäst för mig. Hon har alltid varit rak och tydlig men också öppen och vänlig, samt mycket mån om sina anställda.&rdquo;</p>
-                    <div class="testimonial-author-row">
-                        <img src="images/omdome-rebecca.png" alt="Rebecca" class="testimonial-avatar">
-                        <span class="testimonial-author">Rebecca<br><span class="testimonial-author-title">Medarbetare, Pressbyrån Norra Hamngatan</span></span>
-                    </div>
-                </div>
-
             </div>
-        </div>
-    </section>
+        </section>
 
         <section id="contact" class="section-contact">
             <div class="container">

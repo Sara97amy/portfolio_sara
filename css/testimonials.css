@@ -2,64 +2,80 @@
     background-color: var(--background-color-2);
 }
 
-.testimonials-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+.testimonials-carousel {
+    display: flex;
+    align-items: center;
     gap: var(--spacing-large);
 }
 
+.carousel-track-wrapper {
+    flex: 1;
+    overflow: hidden;
+}
+
+.carousel-track {
+    display: flex;
+    transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.testimonial-slide {
+    min-width: 100%;
+    padding: 0 2px;
+    display: flex;
+}
+
 .testimonial-card {
-    min-width: 0;
     display: flex;
     flex-direction: column;
-    gap: var(--spacing-medium);
-    padding: var(--spacing-large);
+    align-items: center;
+    text-align: center;
+    gap: var(--spacing-large);
+    padding: calc(var(--spacing-large) * 1.5) calc(var(--spacing-large) * 2.5);
+    height: 100%;
     border-radius: var(--border-radius-card);
     background-color: var(--color-card);
-    box-shadow: var(--shadow-card);
+    border: 1px solid rgba(0, 0, 0, 0.06);
     position: relative;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.testimonial-card--full {
-    grid-column: 1 / -1;
-}
-
-.testimonial-card:hover {
-    transform: scale(1.03);
-    box-shadow: 0 8px 32px rgba(248, 120, 40, 0.18);
 }
 
 .testimonial-card::before {
     content: '\201C';
-    font-size: 5rem;
+    font-size: 6rem;
     line-height: 1;
     color: var(--accent-color-orange);
-    opacity: 0.25;
+    opacity: 0.2;
     position: absolute;
-    top: 12px;
-    left: 24px;
+    top: 16px;
+    left: 32px;
 }
 
 .testimonial-quote {
-    font-size: 0.95rem;
-    line-height: 1.7;
-    text-align: left;
-    padding-top: 2rem;
+    font-size: 1rem;
+    line-height: 1.8;
+    padding-top: 1.5rem;
+    max-width: 900px;
+    flex: 1;
+    display: flex;
+    align-items: center;
 }
 
 .testimonial-author-row {
     display: flex;
     align-items: center;
     gap: var(--spacing-medium);
-    margin-top: auto;
-    padding-top: var(--spacing-small);
+    padding-top: var(--spacing-medium);
     border-top: 1px solid var(--background-color-2);
+    width: 100%;
+    justify-content: flex-start;
+}
+
+.testimonial-author {
+    text-align: left;
 }
 
 .testimonial-avatar {
-    width: 64px;
-    height: 64px;
+    width: 56px;
+    height: 56px;
     border-radius: 50%;
     object-fit: cover;
     object-position: center top;
@@ -85,19 +101,70 @@
     letter-spacing: 0;
 }
 
+.carousel-btn {
+    flex-shrink: 0;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: none;
+    background-color: transparent;
+    color: var(--color-text-muted);
+    font-size: 1rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.carousel-btn:hover:not(:disabled) {
+    color: var(--accent-color-orange);
+    transform: scale(1.2);
+}
+
+.carousel-btn:disabled {
+    opacity: 0.2;
+    cursor: default;
+}
+
+.carousel-dots {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-top: var(--spacing-medium);
+}
+
+.carousel-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    border: none;
+    background-color: var(--color-text-muted);
+    opacity: 0.3;
+    cursor: pointer;
+    padding: 0;
+    transition: opacity 0.2s ease, background-color 0.2s ease, transform 0.2s ease;
+}
+
+.carousel-dot.active {
+    background-color: var(--accent-color-orange);
+    opacity: 1;
+    transform: scale(1.3);
+}
+
 @media (max-width: 768px) {
-    .testimonials-grid {
-        grid-template-columns: 1fr;
-        gap: var(--spacing-medium);
+    .testimonials-carousel {
+        gap: var(--spacing-small);
     }
 
     .testimonial-card {
-        padding: var(--spacing-medium);
+        padding: var(--spacing-large) var(--spacing-medium);
+        height: auto;
+    min-height: 0;
     }
 
-    .testimonial-card:hover {
-        transform: none;
-        box-shadow: var(--shadow-card);
+    .carousel-btn {
+        font-size: 0.9rem;
     }
 }
 
