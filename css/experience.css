@@ -81,26 +81,20 @@
     display: none;
 }
 
-.cv-download-btn {
-    display: inline-flex;
-    align-self: flex-start;
-    align-items: center;
-    gap: 8px;
+.experience-cta {
     margin-top: var(--spacing-medium);
-    padding: 10px 20px;
-    border: 1.5px solid var(--accent-color-orange);
-    border-radius: var(--border-radius);
-    font-family: 'Atkinson Hyperlegible Mono', monospace;
-    font-size: 0.82rem;
-    font-weight: 700;
-    color: var(--accent-color-orange);
-    text-decoration: none;
-    transition: background-color 0.2s ease, color 0.2s ease;
+    font-size: 0.88rem;
+    color: var(--color-text-muted);
 }
 
-.cv-download-btn:hover {
-    background-color: var(--accent-color-orange);
-    color: white;
+.experience-cta a {
+    color: var(--accent-color-orange);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.experience-cta a:hover {
+    text-decoration: underline;
 }
 
 .merit-label {
