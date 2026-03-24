@@ -41,19 +41,19 @@
 
 .testimonial-card::before {
     content: '\201C';
-    font-size: 6rem;
+    font-size: 5rem;
     line-height: 1;
     color: var(--accent-color-orange);
-    opacity: 0.2;
-    position: absolute;
-    top: 16px;
-    left: 32px;
+    opacity: 0.25;
+    display: block;
+    width: 100%;
+    text-align: left;
+    margin-bottom: -1.5rem;
 }
 
 .testimonial-quote {
     font-size: 1rem;
     line-height: 1.8;
-    padding-top: 1.5rem;
     max-width: 900px;
     flex: 1;
     display: flex;
@@ -141,15 +141,34 @@
 
 @media (max-width: 768px) {
     .testimonials-carousel {
-        gap: var(--spacing-small);
+        display: block;
+    }
+
+    .carousel-track-wrapper {
+        overflow: visible;
+    }
+
+    .carousel-track {
+        flex-direction: column;
+        transform: none !important;
+        gap: var(--spacing-medium);
+    }
+
+    .testimonial-slide {
+        min-width: 100%;
     }
 
     .testimonial-card {
         padding: var(--spacing-large) var(--spacing-medium);
+        height: auto;
     }
 
     .carousel-btn {
-        font-size: 0.9rem;
+        display: none;
+    }
+
+    .carousel-dots {
+        display: none;
     }
 }
 
